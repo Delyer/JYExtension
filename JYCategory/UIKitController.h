@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIKitController.h
 //  JYCategory
 //
 //  Created by Dely on 2017/8/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UIKitController : UIViewController
 
 @end

@@ -7,25 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31A41B81F33ECCC00ED5406 /* NSArray+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A31A41B51F33ECCC00ED5406 /* NSArray+JYSafe.m */; };
+		A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FEA5F1F34E41700EC33E1 /* NSDictionary+JYSafe.m */; };
+		A31FEA631F352A3E00EC33E1 /* NSDictionary+JYURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FEA621F352A3E00EC33E1 /* NSDictionary+JYURL.m */; };
 		A3B1368C1F339C39005C6AF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1368B1F339C39005C6AF5 /* main.m */; };
 		A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1368E1F339C39005C6AF5 /* AppDelegate.m */; };
-		A3B136921F339C39005C6AF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136911F339C39005C6AF5 /* ViewController.m */; };
-		A3B136951F339C39005C6AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B136931F339C39005C6AF5 /* Main.storyboard */; };
 		A3B136971F339C39005C6AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B136961F339C39005C6AF5 /* Assets.xcassets */; };
-		A3B1369A1F339C39005C6AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B136981F339C39005C6AF5 /* LaunchScreen.storyboard */; };
+		A3B136A41F339D7A005C6AF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136A21F339D7A005C6AF5 /* ViewController.m */; };
+		A3B136A51F339D7A005C6AF5 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136A31F339D7A005C6AF5 /* ViewController.xib */; };
+		A3B136A71F339E29005C6AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B136A61F339E29005C6AF5 /* LaunchScreen.storyboard */; };
+		A3B136B01F339F78005C6AF5 /* NSArray+JYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136AF1F339F78005C6AF5 /* NSArray+JYLog.m */; };
+		A3B136B41F33D0E6005C6AF5 /* FoundationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136B21F33D0E6005C6AF5 /* FoundationController.m */; };
+		A3B136B51F33D0E6005C6AF5 /* FoundationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */; };
+		A3B136B91F33D125005C6AF5 /* UIKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136B71F33D125005C6AF5 /* UIKitController.m */; };
+		A3B136BA1F33D125005C6AF5 /* UIKitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136B81F33D125005C6AF5 /* UIKitController.xib */; };
+		A3B136BD1F33D91E005C6AF5 /* JYSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136BC1F33D91E005C6AF5 /* JYSwizzing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A31A41B41F33ECCC00ED5406 /* NSArray+JYSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JYSafe.h"; sourceTree = "<group>"; };
+		A31A41B51F33ECCC00ED5406 /* NSArray+JYSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JYSafe.m"; sourceTree = "<group>"; };
+		A31A41BB1F33F0A600ED5406 /* JYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCategory.h; sourceTree = "<group>"; };
+		A31FEA5E1F34E41700EC33E1 /* NSDictionary+JYSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JYSafe.h"; sourceTree = "<group>"; };
+		A31FEA5F1F34E41700EC33E1 /* NSDictionary+JYSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JYSafe.m"; sourceTree = "<group>"; };
+		A31FEA611F352A3E00EC33E1 /* NSDictionary+JYURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JYURL.h"; sourceTree = "<group>"; };
+		A31FEA621F352A3E00EC33E1 /* NSDictionary+JYURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JYURL.m"; sourceTree = "<group>"; };
 		A3B136871F339C39005C6AF5 /* JYCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B1368B1F339C39005C6AF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3B1368D1F339C39005C6AF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A3B1368E1F339C39005C6AF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A3B136901F339C39005C6AF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A3B136911F339C39005C6AF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A3B136941F339C39005C6AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3B136961F339C39005C6AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A3B136991F339C39005C6AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3B1369B1F339C39005C6AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3B136A11F339D7A005C6AF5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A3B136A21F339D7A005C6AF5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A3B136A31F339D7A005C6AF5 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		A3B136A61F339E29005C6AF5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3B136AE1F339F78005C6AF5 /* NSArray+JYLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JYLog.h"; sourceTree = "<group>"; };
+		A3B136AF1F339F78005C6AF5 /* NSArray+JYLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JYLog.m"; sourceTree = "<group>"; };
+		A3B136B11F33D0E6005C6AF5 /* FoundationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationController.h; sourceTree = "<group>"; };
+		A3B136B21F33D0E6005C6AF5 /* FoundationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationController.m; sourceTree = "<group>"; };
+		A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoundationController.xib; sourceTree = "<group>"; };
+		A3B136B61F33D125005C6AF5 /* UIKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitController.h; sourceTree = "<group>"; };
+		A3B136B71F33D125005C6AF5 /* UIKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitController.m; sourceTree = "<group>"; };
+		A3B136B81F33D125005C6AF5 /* UIKitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIKitController.xib; sourceTree = "<group>"; };
+		A3B136BB1F33D91E005C6AF5 /* JYSwizzing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSwizzing.h; sourceTree = "<group>"; };
+		A3B136BC1F33D91E005C6AF5 /* JYSwizzing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSwizzing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +84,19 @@
 		A3B136891F339C39005C6AF5 /* JYCategory */ = {
 			isa = PBXGroup;
 			children = (
+				A3B136A91F339E9E005C6AF5 /* JYCategory */,
 				A3B1368D1F339C39005C6AF5 /* AppDelegate.h */,
 				A3B1368E1F339C39005C6AF5 /* AppDelegate.m */,
-				A3B136901F339C39005C6AF5 /* ViewController.h */,
-				A3B136911F339C39005C6AF5 /* ViewController.m */,
-				A3B136931F339C39005C6AF5 /* Main.storyboard */,
-				A3B136961F339C39005C6AF5 /* Assets.xcassets */,
-				A3B136981F339C39005C6AF5 /* LaunchScreen.storyboard */,
-				A3B1369B1F339C39005C6AF5 /* Info.plist */,
+				A3B136A11F339D7A005C6AF5 /* ViewController.h */,
+				A3B136A21F339D7A005C6AF5 /* ViewController.m */,
+				A3B136A31F339D7A005C6AF5 /* ViewController.xib */,
+				A3B136B11F33D0E6005C6AF5 /* FoundationController.h */,
+				A3B136B21F33D0E6005C6AF5 /* FoundationController.m */,
+				A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */,
+				A3B136B61F33D125005C6AF5 /* UIKitController.h */,
+				A3B136B71F33D125005C6AF5 /* UIKitController.m */,
+				A3B136B81F33D125005C6AF5 /* UIKitController.xib */,
+				A3B136A81F339E7B005C6AF5 /* Resoure */,
 				A3B1368A1F339C39005C6AF5 /* Supporting Files */,
 			);
 			path = JYCategory;
@@ -77,6 +108,66 @@
 				A3B1368B1F339C39005C6AF5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3B136A81F339E7B005C6AF5 /* Resoure */ = {
+			isa = PBXGroup;
+			children = (
+				A3B136A61F339E29005C6AF5 /* LaunchScreen.storyboard */,
+				A3B1369B1F339C39005C6AF5 /* Info.plist */,
+				A3B136961F339C39005C6AF5 /* Assets.xcassets */,
+			);
+			name = Resoure;
+			sourceTree = "<group>";
+		};
+		A3B136A91F339E9E005C6AF5 /* JYCategory */ = {
+			isa = PBXGroup;
+			children = (
+				A31A41BB1F33F0A600ED5406 /* JYCategory.h */,
+				A3B136BB1F33D91E005C6AF5 /* JYSwizzing.h */,
+				A3B136BC1F33D91E005C6AF5 /* JYSwizzing.m */,
+				A3B136AA1F339E9E005C6AF5 /* Foundation */,
+				A3B136AB1F339E9E005C6AF5 /* UIKit */,
+			);
+			path = JYCategory;
+			sourceTree = "<group>";
+		};
+		A3B136AA1F339E9E005C6AF5 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A3B136AC1F339F2D005C6AF5 /* NSArray */,
+				A3B136AD1F339F2D005C6AF5 /* NSDictionary */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A3B136AB1F339E9E005C6AF5 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A3B136AC1F339F2D005C6AF5 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				A3B136AE1F339F78005C6AF5 /* NSArray+JYLog.h */,
+				A3B136AF1F339F78005C6AF5 /* NSArray+JYLog.m */,
+				A31A41B41F33ECCC00ED5406 /* NSArray+JYSafe.h */,
+				A31A41B51F33ECCC00ED5406 /* NSArray+JYSafe.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		A3B136AD1F339F2D005C6AF5 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				A31FEA5E1F34E41700EC33E1 /* NSDictionary+JYSafe.h */,
+				A31FEA5F1F34E41700EC33E1 /* NSDictionary+JYSafe.m */,
+				A31FEA611F352A3E00EC33E1 /* NSDictionary+JYURL.h */,
+				A31FEA621F352A3E00EC33E1 /* NSDictionary+JYURL.m */,
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +228,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3B1369A1F339C39005C6AF5 /* LaunchScreen.storyboard in Resources */,
+				A3B136B51F33D0E6005C6AF5 /* FoundationController.xib in Resources */,
+				A3B136A71F339E29005C6AF5 /* LaunchScreen.storyboard in Resources */,
+				A3B136A51F339D7A005C6AF5 /* ViewController.xib in Resources */,
 				A3B136971F339C39005C6AF5 /* Assets.xcassets in Resources */,
-				A3B136951F339C39005C6AF5 /* Main.storyboard in Resources */,
+				A3B136BA1F33D125005C6AF5 /* UIKitController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,32 +243,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3B136921F339C39005C6AF5 /* ViewController.m in Sources */,
+				A3B136BD1F33D91E005C6AF5 /* JYSwizzing.m in Sources */,
+				A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */,
+				A3B136B91F33D125005C6AF5 /* UIKitController.m in Sources */,
+				A3B136A41F339D7A005C6AF5 /* ViewController.m in Sources */,
 				A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */,
+				A31FEA631F352A3E00EC33E1 /* NSDictionary+JYURL.m in Sources */,
+				A3B136B41F33D0E6005C6AF5 /* FoundationController.m in Sources */,
+				A3B136B01F339F78005C6AF5 /* NSArray+JYLog.m in Sources */,
 				A3B1368C1F339C39005C6AF5 /* main.m in Sources */,
+				A31A41B81F33ECCC00ED5406 /* NSArray+JYSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A3B136931F339C39005C6AF5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3B136941F339C39005C6AF5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A3B136981F339C39005C6AF5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3B136991F339C39005C6AF5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A3B1369C1F339C39005C6AF5 /* Debug */ = {
@@ -311,6 +392,7 @@
 				A3B136A01F339C39005C6AF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

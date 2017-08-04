@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "FoundationController.h"
+#import "UIKitController.h"
 
 @interface ViewController ()
 
@@ -16,14 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Category";
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)goToFoundationAction:(UIButton *)sender {
+    FoundationController *FVC = [FoundationController new];
+    [self.navigationController pushViewController:FVC animated:YES];
 }
 
+- (IBAction)goToUIKitAction:(UIButton *)sender {
+    UIKitController *UVC = [UIKitController new];
+    [self.navigationController pushViewController:UVC animated:YES];
+}
 
 @end
