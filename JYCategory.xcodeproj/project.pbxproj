@@ -65,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A31FEA641F353D9C00EC33E1 /* NSFileManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSFileManager;
+			sourceTree = "<group>";
+		};
 		A3B1367E1F339C39005C6AF5 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +142,7 @@
 		A3B136AA1F339E9E005C6AF5 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A31FEA641F353D9C00EC33E1 /* NSFileManager */,
 				A3B136AC1F339F2D005C6AF5 /* NSArray */,
 				A3B136AD1F339F2D005C6AF5 /* NSDictionary */,
 			);
