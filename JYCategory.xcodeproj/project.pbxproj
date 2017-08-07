@@ -10,6 +10,7 @@
 		A31A41B81F33ECCC00ED5406 /* NSArray+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A31A41B51F33ECCC00ED5406 /* NSArray+JYSafe.m */; };
 		A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FEA5F1F34E41700EC33E1 /* NSDictionary+JYSafe.m */; };
 		A31FEA631F352A3E00EC33E1 /* NSDictionary+JYURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FEA621F352A3E00EC33E1 /* NSDictionary+JYURL.m */; };
+		A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A38778051F38D4C9004C90F4 /* NSFileManager+JYPath.m */; };
 		A3B1368C1F339C39005C6AF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1368B1F339C39005C6AF5 /* main.m */; };
 		A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B1368E1F339C39005C6AF5 /* AppDelegate.m */; };
 		A3B136971F339C39005C6AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B136961F339C39005C6AF5 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 		A31FEA5F1F34E41700EC33E1 /* NSDictionary+JYSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JYSafe.m"; sourceTree = "<group>"; };
 		A31FEA611F352A3E00EC33E1 /* NSDictionary+JYURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JYURL.h"; sourceTree = "<group>"; };
 		A31FEA621F352A3E00EC33E1 /* NSDictionary+JYURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JYURL.m"; sourceTree = "<group>"; };
+		A38778041F38D4C9004C90F4 /* NSFileManager+JYPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+JYPath.h"; sourceTree = "<group>"; };
+		A38778051F38D4C9004C90F4 /* NSFileManager+JYPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+JYPath.m"; sourceTree = "<group>"; };
 		A3B136871F339C39005C6AF5 /* JYCategory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYCategory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B1368B1F339C39005C6AF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3B1368D1F339C39005C6AF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 		A31FEA641F353D9C00EC33E1 /* NSFileManager */ = {
 			isa = PBXGroup;
 			children = (
+				A38778041F38D4C9004C90F4 /* NSFileManager+JYPath.h */,
+				A38778051F38D4C9004C90F4 /* NSFileManager+JYPath.m */,
 			);
 			path = NSFileManager;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			files = (
 				A3B136BD1F33D91E005C6AF5 /* JYSwizzing.m in Sources */,
 				A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */,
+				A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */,
 				A3B136B91F33D125005C6AF5 /* UIKitController.m in Sources */,
 				A3B136A41F339D7A005C6AF5 /* ViewController.m in Sources */,
 				A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */,

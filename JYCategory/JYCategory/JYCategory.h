@@ -13,5 +13,6 @@
 #import "NSArray+JYLog.h"
 #import "NSDictionary+JYSafe.h"
 #import "NSDictionary+JYURL.h"
+#import "NSFileManager+JYPath.h"
 
 #endif /* JYCategory_h */

@@ -15,8 +15,8 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuX-5A-ZUd">
@@ -80,11 +80,14 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-hu-bLw">
-                    <rect key="frame" x="10" y="310" width="109" height="20"/>
+                    <rect key="frame" x="10" y="310" width="162" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="e8L-XS-NTs"/>
                     </constraints>
-                    <state key="normal" title="NSArray+JYLog"/>
+                    <state key="normal" title="NSFileManager+JYPath"/>
+                    <connections>
+                        <action selector="test_NSFileManager_JYPath:" destination="-1" eventType="touchUpInside" id="cLx-bB-p0T"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-d3-MB9">
                     <rect key="frame" x="10" y="350" width="109" height="20"/>

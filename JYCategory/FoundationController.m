@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Foundation";
-    
 }
 
 
@@ -227,5 +226,35 @@
     NSLog(@"URL转为为字典：%@",[NSDictionary dictionaryWithURLQuery:urlEncode]);
 }
 
+#pragma mark - ----------- testFileManager -----------
+- (IBAction)test_NSFileManager_JYPath:(UIButton *)sender {
+    NSDictionary *pathDict = @{@"根目录":[NSFileManager getDirHome],@"Doctments目录":[NSFileManager getDirDocumentsPath],@"Library目录":[NSFileManager getDirLibraryPath],@"Cache目录":[NSFileManager getDirCachePath],@"Tmp目录":[NSFileManager getDirTmpPath]};
+    NSLog(@"app目录：%@",pathDict);
+   ;
+    NSString *path = [NSFileManager getDirHome];
+    NSLog(@"递归获取文件%@", [NSFileManager getSubpathsAtPath:path]);
+    NSLog(@"非递归获取文件%@", [NSFileManager getContentsOfDirectoryAtPath:path]);
+    NSLog(@"创建test目录：%d",[NSFileManager createDirectoryAtPath:path dirName:@"test"]);
+    NSLog(@"创建文件：%d",[NSFileManager createFileAtPath:path fileName:@"test/1.txt"]);
+    
+    
+    NSString *txtPath = [NSString stringWithFormat:@"%@/123",path];
+    NSString *testStr = @"这是测试111111111";
+    NSData *data = [testStr dataUsingEncoding:NSUTF8StringEncoding];
+    [NSFileManager writeWithData:data toPath:path fileName:@"123"];
+    NSData *data1 = [NSFileManager readFileAtPath:txtPath];
+    NSLog(@"读取的内容是：\n%@", [[NSString alloc] initWithData:data1 encoding:NSUTF8StringEncoding]);
+    
+    NSString *tmpPath = [[NSFileManager getDirTmpPath] stringByAppendingPathComponent:@"1234"];
+    NSString *tmp1Path = [[NSFileManager getDirHome] stringByAppendingPathComponent:@"123434"];
+    //复制文件
+    [NSFileManager copyItemAtPath:txtPath toPath:tmpPath];
+    //移动文件
+    [NSFileManager moveItemAtPath:tmpPath toPath:tmp1Path];
+    
+    //删除文件
+    [NSFileManager deleteFileOrDicAtPath:txtPath];
+    
+}
 
 @end
