@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
+/*
+ *处理URL编码
+ */
+
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (JYURL)

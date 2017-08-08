@@ -15,8 +15,8 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuX-5A-ZUd">
@@ -90,18 +90,24 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-d3-MB9">
-                    <rect key="frame" x="10" y="350" width="109" height="20"/>
+                    <rect key="frame" x="10" y="350" width="62" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="6PS-iJ-cjq"/>
                     </constraints>
-                    <state key="normal" title="NSArray+JYLog"/>
+                    <state key="normal" title="NSString"/>
+                    <connections>
+                        <action selector="test_NSString:" destination="-1" eventType="touchUpInside" id="atT-pn-ZI8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-7n-cbV">
-                    <rect key="frame" x="10" y="390" width="109" height="20"/>
+                    <rect key="frame" x="10" y="390" width="53" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="sZb-kq-Sf4"/>
                     </constraints>
-                    <state key="normal" title="NSArray+JYLog"/>
+                    <state key="normal" title="Base64"/>
+                    <connections>
+                        <action selector="test_Base64:" destination="-1" eventType="touchUpInside" id="eEI-42-Rb8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcI-UJ-olL">
                     <rect key="frame" x="10" y="430" width="109" height="20"/>

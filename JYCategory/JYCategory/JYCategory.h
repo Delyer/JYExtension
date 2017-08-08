@@ -14,5 +14,10 @@
 #import "NSDictionary+JYSafe.h"
 #import "NSDictionary+JYURL.h"
 #import "NSFileManager+JYPath.h"
+#import "NSString+JYURLEncode.h"
+#import "NSString+JYJudge.h"
+#import "NSString+JYCommon.h"
+#import "NSString+JYTransform.h"
+#import "JYBase64.h"
 
 #endif /* JYCategory_h */

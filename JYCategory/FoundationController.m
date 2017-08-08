@@ -8,6 +8,7 @@
 
 #import "FoundationController.h"
 #import "JYCategory.h"
+#import "JY3DES.h"
 
 @interface FoundationController ()
 
@@ -256,5 +257,60 @@
     [NSFileManager deleteFileOrDicAtPath:txtPath];
     
 }
+
+
+#pragma mark - ----------- testNSString -----------
+- (IBAction)test_NSString:(UIButton *)sender {
+    NSString *url = @"你好! world";
+    NSString *urlencode = [url urlEncode];
+    NSLog(@"编码url = %@",urlencode);
+    NSLog(@"解码url = %@",[urlencode urlDecode]);
+//    NSString *empty;
+//    BOOL isEmpty = [NSString isEmptyWithString:empty];
+    
+//    BOOL isChinese = [url containsChineseCharacter];
+    
+    NSLog(@"UUID = %@",[NSString getUUID]);
+    
+    //NSString > NSData
+//    NSData *data = [url getData];
+    
+    NSLog(@"md5加密(32位)：%@",[url md5]);
+    NSLog(@"sha512加密：%@",[url sha512]);
+    
+    NSString *key = @"123456781234567812345678";
+    NSString *base64key = [key base64Encode];
+    
+    NSString *desString = [JY3DES tripleDES:@"你好 world!" encryptOrDecrypt:kCCEncrypt DESBase64Key:base64key];
+    NSLog(@"3DES加密后的字符串为：%@",desString);
+    NSLog(@"3DES解密后的字符串为：%@",[JY3DES tripleDES:desString encryptOrDecrypt:kCCDecrypt DESBase64Key:base64key]);
+    
+    NSString *desStr = [@"你好 world!" tripleDESWithEncryptOrDecrypt:kCCEncrypt DESBase64Key:base64key];
+    NSLog(@"分类方法3DES加密 = %@",desStr);
+    NSLog(@"分类方法3DES解密 = %@",[desStr tripleDESWithEncryptOrDecrypt:kCCDecrypt DESBase64Key:base64key]);
+    
+}
+
+#pragma mark - ----------- testBase64 -----------
+- (IBAction)test_Base64:(UIButton *)sender{
+    NSString *str = @"Hello world !";
+    
+    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *base64 = [data base64Encode];
+    NSLog(@"data的base64编码 = %@",base64);
+    
+    NSString *origin = [NSString stringWithBase64EncodedString:base64];
+    
+    NSLog(@"原字符串 = %@",origin);
+    
+    
+    NSLog(@"base64编码 = %@",[str base64Encode]);
+    NSLog(@"base64解码 = %@",[[str base64Encode] base64Decode]);
+    
+    NSLog(@"相同的原始NSData = \n%@\n%@\n%@",[NSData dataWithBase64EncodedString:base64],[base64 base64DecodedData],data);
+}
+
+
 
 @end
