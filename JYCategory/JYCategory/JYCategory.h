@@ -19,5 +19,8 @@
 #import "NSString+JYCommon.h"
 #import "NSString+JYTransform.h"
 #import "JYBase64.h"
+#import "NSUserDefaults+JYSafe.h"
+#import "NSData+JYHandle.h"
+#import "NSDate+JYHandle.h"
 
 #endif /* JYCategory_h */

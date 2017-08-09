@@ -311,6 +311,26 @@
     NSLog(@"相同的原始NSData = \n%@\n%@\n%@",[NSData dataWithBase64EncodedString:base64],[base64 base64DecodedData],data);
 }
 
-
-
+- (IBAction)test_NSUserDefaults_JYSafe:(UIButton *)sender {
+    [NSUserDefaults setObject:@"hello world" forKey:@"你好"];
+    NSLog(@"取出数据 = %@",[NSUserDefaults objectForKey:@"你好"]);
+    
+    NSLog(@"取出数据 = %@",[NSUserDefaults objectForKey:nil]);
+    
+    [NSUserDefaults setArcObject:@"onetwothree" forKey:@"123"];
+    NSLog(@"取出数据 = %@",[NSUserDefaults arcObjectForKey:@"123"]);
+    
+}
+- (IBAction)test_NSDate_JYHandle:(UIButton *)sender {
+    NSDate *date = [NSDate dataFromTimeIntervalSince1970:1000000000000];
+    NSString *dateStr = [NSDate dateStringWithDate:date dateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSLog(@"date = %@ /n dateStr = %@",date,dateStr);
+    
+    NSDate *nowDate = [NSDate date];
+    
+    NSLog(@"今天一个星期的第%lu天",[nowDate weekday]);
+    NSDate *testDate = [NSDate dateWithYYYYMMddHHmmss:@"2017-08-09 12:00:00"];
+    NSLog(@"是否是同一周：%d", [nowDate sameWeekWithDate:testDate]);
+    
+}
 @end

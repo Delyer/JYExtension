@@ -29,6 +29,9 @@
 		A3B136B51F33D0E6005C6AF5 /* FoundationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */; };
 		A3B136B91F33D125005C6AF5 /* UIKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136B71F33D125005C6AF5 /* UIKitController.m */; };
 		A3B136BA1F33D125005C6AF5 /* UIKitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136B81F33D125005C6AF5 /* UIKitController.xib */; };
+		A3F53E1F1F3B7CB30031599D /* NSUserDefaults+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */; };
+		A3F53E221F3B83CC0031599D /* NSData+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */; };
+		A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,12 @@
 		A3B136B61F33D125005C6AF5 /* UIKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitController.h; sourceTree = "<group>"; };
 		A3B136B71F33D125005C6AF5 /* UIKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitController.m; sourceTree = "<group>"; };
 		A3B136B81F33D125005C6AF5 /* UIKitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIKitController.xib; sourceTree = "<group>"; };
+		A3F53E1D1F3B7CB30031599D /* NSUserDefaults+JYSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+JYSafe.h"; sourceTree = "<group>"; };
+		A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JYSafe.m"; sourceTree = "<group>"; };
+		A3F53E201F3B83CC0031599D /* NSData+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JYHandle.h"; sourceTree = "<group>"; };
+		A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JYHandle.m"; sourceTree = "<group>"; };
+		A3F53E241F3B85C90031599D /* NSDate+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JYHandle.h"; sourceTree = "<group>"; };
+		A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JYHandle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,10 +225,13 @@
 		A3B136AA1F339E9E005C6AF5 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A3F53E1B1F3B7C7B0031599D /* NSData */,
+				A3F53E231F3B857E0031599D /* NSDate */,
 				A3B136AC1F339F2D005C6AF5 /* NSArray */,
 				A38778071F3921A6004C90F4 /* NSString */,
 				A3B136AD1F339F2D005C6AF5 /* NSDictionary */,
 				A31FEA641F353D9C00EC33E1 /* NSFileManager */,
+				A3F53E1C1F3B7C7B0031599D /* NSUserDefaults */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -251,6 +263,33 @@
 				A31FEA621F352A3E00EC33E1 /* NSDictionary+JYURL.m */,
 			);
 			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		A3F53E1B1F3B7C7B0031599D /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				A3F53E201F3B83CC0031599D /* NSData+JYHandle.h */,
+				A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		A3F53E1C1F3B7C7B0031599D /* NSUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				A3F53E1D1F3B7CB30031599D /* NSUserDefaults+JYSafe.h */,
+				A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */,
+			);
+			path = NSUserDefaults;
+			sourceTree = "<group>";
+		};
+		A3F53E231F3B857E0031599D /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				A3F53E241F3B85C90031599D /* NSDate+JYHandle.h */,
+				A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */,
+				A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */,
 				A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */,
 				A3B136B91F33D125005C6AF5 /* UIKitController.m in Sources */,
 				A38778101F392C61004C90F4 /* NSString+JYCommon.m in Sources */,
@@ -335,6 +375,7 @@
 				A3B136A41F339D7A005C6AF5 /* ViewController.m in Sources */,
 				A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */,
 				A38778131F393550004C90F4 /* NSString+JYTransform.m in Sources */,
+				A3F53E221F3B83CC0031599D /* NSData+JYHandle.m in Sources */,
 				A33683BA1F3A3B92001D051F /* JY3DES.m in Sources */,
 				A387780D1F392735004C90F4 /* NSString+JYJudge.m in Sources */,
 				A31FEA631F352A3E00EC33E1 /* NSDictionary+JYURL.m in Sources */,
@@ -343,6 +384,7 @@
 				A33683B31F3A2665001D051F /* JYBase64.m in Sources */,
 				A3B1368C1F339C39005C6AF5 /* main.m in Sources */,
 				A31A41B81F33ECCC00ED5406 /* NSArray+JYSafe.m in Sources */,
+				A3F53E1F1F3B7CB30031599D /* NSUserDefaults+JYSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -110,18 +110,24 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcI-UJ-olL">
-                    <rect key="frame" x="10" y="430" width="109" height="20"/>
+                    <rect key="frame" x="10" y="430" width="167" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="usf-O6-xDY"/>
                     </constraints>
-                    <state key="normal" title="NSArray+JYLog"/>
+                    <state key="normal" title="NSUserDefaults+JYSafe"/>
+                    <connections>
+                        <action selector="test_NSUserDefaults_JYSafe:" destination="-1" eventType="touchUpInside" id="l9C-L7-8fr"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8E-vS-AFH">
-                    <rect key="frame" x="10" y="470" width="109" height="20"/>
+                    <rect key="frame" x="10" y="470" width="125" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="ZD0-29-xB6"/>
                     </constraints>
-                    <state key="normal" title="NSArray+JYLog"/>
+                    <state key="normal" title="NSDate_JYHandle"/>
+                    <connections>
+                        <action selector="test_NSDate_JYHandle:" destination="-1" eventType="touchUpInside" id="rR5-4p-xZa"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtg-CC-v0f">
                     <rect key="frame" x="10" y="550" width="109" height="20"/>
