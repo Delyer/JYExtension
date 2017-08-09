@@ -33,6 +33,7 @@
 		A3F53E321F3BBEEC0031599D /* UKController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E301F3BBEEC0031599D /* UKController.m */; };
 		A3F53E331F3BBEEC0031599D /* UKController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F53E311F3BBEEC0031599D /* UKController.xib */; };
 		A3F53E381F3BCFA80031599D /* UIDevice+JYInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */; };
+		A3F53E3B1F3BD1CF0031599D /* UIColor+JYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E3A1F3BD1CF0031599D /* UIColor+JYCommon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,8 @@
 		A3F53E311F3BBEEC0031599D /* UKController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UKController.xib; sourceTree = "<group>"; };
 		A3F53E361F3BCFA80031599D /* UIDevice+JYInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JYInfo.h"; sourceTree = "<group>"; };
 		A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JYInfo.m"; sourceTree = "<group>"; };
+		A3F53E391F3BD1CF0031599D /* UIColor+JYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JYCommon.h"; sourceTree = "<group>"; };
+		A3F53E3A1F3BD1CF0031599D /* UIColor+JYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JYCommon.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +303,8 @@
 		A3F53E341F3BCFA80031599D /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
+				A3F53E391F3BD1CF0031599D /* UIColor+JYCommon.h */,
+				A3F53E3A1F3BD1CF0031599D /* UIColor+JYCommon.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				A38778101F392C61004C90F4 /* NSString+JYCommon.m in Sources */,
 				A33683B01F3A262D001D051F /* JYSwizzing.m in Sources */,
 				A387780A1F39227B004C90F4 /* NSString+JYURLEncode.m in Sources */,
+				A3F53E3B1F3BD1CF0031599D /* UIColor+JYCommon.m in Sources */,
 				A3B136A41F339D7A005C6AF5 /* ViewController.m in Sources */,
 				A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */,
 				A38778131F393550004C90F4 /* NSString+JYTransform.m in Sources */,

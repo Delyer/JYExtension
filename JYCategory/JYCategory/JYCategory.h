@@ -26,6 +26,7 @@
 
 //UIKit
 #import "UIDevice+JYInfo.h"
+#import "UIColor+JYCommon.h"
 
 
 #endif /* JYCategory_h */

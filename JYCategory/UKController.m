@@ -41,5 +41,14 @@
     NSLog(@"当前语言 = %@",[UIDevice getDeviceLanguage]);
 }
 
+#pragma mark - -----------------testDevice-----------------
+- (IBAction)test_UIColor_JYCommon:(UIButton *)sender {
+    
+    //渐变颜色
+    UIColor *color = [UIColor getJYGradientColorFromColor:[UIColor redColor] toColor:[UIColor purpleColor] withHeight:[UIDevice getDeviceScreenHeight]];
+    self.view.backgroundColor = color;
+    
+    
+}
 
 @end
