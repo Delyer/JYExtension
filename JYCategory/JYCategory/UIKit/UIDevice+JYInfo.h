@@ -18,6 +18,9 @@
 // 设备的名称
 + (NSString *)getDeviceName;
 
+// 设备类型
++ (NSString *)getDeviceTypeName;
+
 // app版本号
 + (NSString *)getAPPVerion;
 

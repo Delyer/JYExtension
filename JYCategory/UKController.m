@@ -24,6 +24,7 @@
     
     NSLog(@"屏幕宽和高 w = %f, h = %f",[UIDevice getDeviceScreenWidth],[UIDevice getDeviceScreenHeight]);
     NSLog(@"设备的名字 = %@",[UIDevice getDeviceName]);
+    NSLog(@"设备型号 = %@",[UIDevice getDeviceTypeName]);
     NSLog(@"app版本号 = %@",[UIDevice getAPPVerion]);
     NSLog(@"app_build版本号 = %@",[UIDevice getAPPBuildVersion]);
     NSLog(@"appName = %@",[UIDevice getAPPName]);
