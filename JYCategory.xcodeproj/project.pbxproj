@@ -30,9 +30,9 @@
 		A3F53E1F1F3B7CB30031599D /* NSUserDefaults+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */; };
 		A3F53E221F3B83CC0031599D /* NSData+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */; };
 		A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */; };
-		A3F53E291F3BBA530031599D /* UIDevice+JYInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E281F3BBA530031599D /* UIDevice+JYInfo.m */; };
 		A3F53E321F3BBEEC0031599D /* UKController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E301F3BBEEC0031599D /* UKController.m */; };
 		A3F53E331F3BBEEC0031599D /* UKController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F53E311F3BBEEC0031599D /* UKController.xib */; };
+		A3F53E381F3BCFA80031599D /* UIDevice+JYInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,11 +80,11 @@
 		A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JYHandle.m"; sourceTree = "<group>"; };
 		A3F53E241F3B85C90031599D /* NSDate+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JYHandle.h"; sourceTree = "<group>"; };
 		A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JYHandle.m"; sourceTree = "<group>"; };
-		A3F53E271F3BBA530031599D /* UIDevice+JYInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JYInfo.h"; sourceTree = "<group>"; };
-		A3F53E281F3BBA530031599D /* UIDevice+JYInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JYInfo.m"; sourceTree = "<group>"; };
 		A3F53E2F1F3BBEEC0031599D /* UKController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKController.h; sourceTree = "<group>"; };
 		A3F53E301F3BBEEC0031599D /* UKController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKController.m; sourceTree = "<group>"; };
 		A3F53E311F3BBEEC0031599D /* UKController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UKController.xib; sourceTree = "<group>"; };
+		A3F53E361F3BCFA80031599D /* UIDevice+JYInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JYInfo.h"; sourceTree = "<group>"; };
+		A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JYInfo.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +242,8 @@
 		A3B136AB1F339E9E005C6AF5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A3F53E271F3BBA530031599D /* UIDevice+JYInfo.h */,
-				A3F53E281F3BBA530031599D /* UIDevice+JYInfo.m */,
+				A3F53E341F3BCFA80031599D /* UIColor */,
+				A3F53E351F3BCFA80031599D /* UIDevice */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -295,6 +295,22 @@
 				A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		A3F53E341F3BCFA80031599D /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		A3F53E351F3BCFA80031599D /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				A3F53E361F3BCFA80031599D /* UIDevice+JYInfo.h */,
+				A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */,
+			);
+			path = UIDevice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F53E291F3BBA530031599D /* UIDevice+JYInfo.m in Sources */,
+				A3F53E381F3BCFA80031599D /* UIDevice+JYInfo.m in Sources */,
 				A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */,
 				A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */,
 				A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */,
