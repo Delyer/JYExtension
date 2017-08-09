@@ -27,11 +27,12 @@
 		A3B136B01F339F78005C6AF5 /* NSArray+JYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136AF1F339F78005C6AF5 /* NSArray+JYLog.m */; };
 		A3B136B41F33D0E6005C6AF5 /* FoundationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136B21F33D0E6005C6AF5 /* FoundationController.m */; };
 		A3B136B51F33D0E6005C6AF5 /* FoundationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */; };
-		A3B136B91F33D125005C6AF5 /* UIKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136B71F33D125005C6AF5 /* UIKitController.m */; };
-		A3B136BA1F33D125005C6AF5 /* UIKitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136B81F33D125005C6AF5 /* UIKitController.xib */; };
 		A3F53E1F1F3B7CB30031599D /* NSUserDefaults+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */; };
 		A3F53E221F3B83CC0031599D /* NSData+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */; };
 		A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */; };
+		A3F53E291F3BBA530031599D /* UIDevice+JYInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E281F3BBA530031599D /* UIDevice+JYInfo.m */; };
+		A3F53E321F3BBEEC0031599D /* UKController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E301F3BBEEC0031599D /* UKController.m */; };
+		A3F53E331F3BBEEC0031599D /* UKController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F53E311F3BBEEC0031599D /* UKController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,15 +74,17 @@
 		A3B136B11F33D0E6005C6AF5 /* FoundationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationController.h; sourceTree = "<group>"; };
 		A3B136B21F33D0E6005C6AF5 /* FoundationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationController.m; sourceTree = "<group>"; };
 		A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoundationController.xib; sourceTree = "<group>"; };
-		A3B136B61F33D125005C6AF5 /* UIKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitController.h; sourceTree = "<group>"; };
-		A3B136B71F33D125005C6AF5 /* UIKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitController.m; sourceTree = "<group>"; };
-		A3B136B81F33D125005C6AF5 /* UIKitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIKitController.xib; sourceTree = "<group>"; };
 		A3F53E1D1F3B7CB30031599D /* NSUserDefaults+JYSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+JYSafe.h"; sourceTree = "<group>"; };
 		A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JYSafe.m"; sourceTree = "<group>"; };
 		A3F53E201F3B83CC0031599D /* NSData+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JYHandle.h"; sourceTree = "<group>"; };
 		A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JYHandle.m"; sourceTree = "<group>"; };
 		A3F53E241F3B85C90031599D /* NSDate+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JYHandle.h"; sourceTree = "<group>"; };
 		A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JYHandle.m"; sourceTree = "<group>"; };
+		A3F53E271F3BBA530031599D /* UIDevice+JYInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JYInfo.h"; sourceTree = "<group>"; };
+		A3F53E281F3BBA530031599D /* UIDevice+JYInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JYInfo.m"; sourceTree = "<group>"; };
+		A3F53E2F1F3BBEEC0031599D /* UKController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKController.h; sourceTree = "<group>"; };
+		A3F53E301F3BBEEC0031599D /* UKController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKController.m; sourceTree = "<group>"; };
+		A3F53E311F3BBEEC0031599D /* UKController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UKController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,9 +187,9 @@
 				A3B136B11F33D0E6005C6AF5 /* FoundationController.h */,
 				A3B136B21F33D0E6005C6AF5 /* FoundationController.m */,
 				A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */,
-				A3B136B61F33D125005C6AF5 /* UIKitController.h */,
-				A3B136B71F33D125005C6AF5 /* UIKitController.m */,
-				A3B136B81F33D125005C6AF5 /* UIKitController.xib */,
+				A3F53E2F1F3BBEEC0031599D /* UKController.h */,
+				A3F53E301F3BBEEC0031599D /* UKController.m */,
+				A3F53E311F3BBEEC0031599D /* UKController.xib */,
 				A3B136A81F339E7B005C6AF5 /* Resoure */,
 				A3B1368A1F339C39005C6AF5 /* Supporting Files */,
 			);
@@ -239,6 +242,8 @@
 		A3B136AB1F339E9E005C6AF5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A3F53E271F3BBA530031599D /* UIDevice+JYInfo.h */,
+				A3F53E281F3BBA530031599D /* UIDevice+JYInfo.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -323,7 +328,8 @@
 				TargetAttributes = {
 					A3B136861F339C39005C6AF5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = PNVB3SL6ZP;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -351,10 +357,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3B136B51F33D0E6005C6AF5 /* FoundationController.xib in Resources */,
+				A3F53E331F3BBEEC0031599D /* UKController.xib in Resources */,
 				A3B136A71F339E29005C6AF5 /* LaunchScreen.storyboard in Resources */,
 				A3B136A51F339D7A005C6AF5 /* ViewController.xib in Resources */,
 				A3B136971F339C39005C6AF5 /* Assets.xcassets in Resources */,
-				A3B136BA1F33D125005C6AF5 /* UIKitController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F53E291F3BBA530031599D /* UIDevice+JYInfo.m in Sources */,
 				A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */,
 				A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */,
 				A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */,
-				A3B136B91F33D125005C6AF5 /* UIKitController.m in Sources */,
 				A38778101F392C61004C90F4 /* NSString+JYCommon.m in Sources */,
 				A33683B01F3A262D001D051F /* JYSwizzing.m in Sources */,
 				A387780A1F39227B004C90F4 /* NSString+JYURLEncode.m in Sources */,
@@ -381,6 +387,7 @@
 				A31FEA631F352A3E00EC33E1 /* NSDictionary+JYURL.m in Sources */,
 				A3B136B41F33D0E6005C6AF5 /* FoundationController.m in Sources */,
 				A3B136B01F339F78005C6AF5 /* NSArray+JYLog.m in Sources */,
+				A3F53E321F3BBEEC0031599D /* UKController.m in Sources */,
 				A33683B31F3A2665001D051F /* JYBase64.m in Sources */,
 				A3B1368C1F339C39005C6AF5 /* main.m in Sources */,
 				A31A41B81F33ECCC00ED5406 /* NSArray+JYSafe.m in Sources */,
@@ -487,10 +494,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PNVB3SL6ZP;
 				INFOPLIST_FILE = JYCategory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dely.JYCategory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0c69c187-2506-4f1b-99db-d2f970ef4a90";
+				PROVISIONING_PROFILE_SPECIFIER = jiuxianTeamDevelop;
 			};
 			name = Debug;
 		};
@@ -498,10 +509,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JYCategory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dely.JYCategory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

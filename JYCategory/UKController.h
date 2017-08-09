@@ -1,13 +1,13 @@
 //
-//  UIKitController.h
+//  UKController.h
 //  JYCategory
 //
-//  Created by Dely on 2017/8/3.
+//  Created by Dely on 2017/8/9.
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIKitController : UIViewController
+@interface UKController : UIViewController
 
 @end

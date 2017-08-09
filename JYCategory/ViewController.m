@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "FoundationController.h"
-#import "UIKitController.h"
+#import "UKController.h"
 
 @interface ViewController ()
 
@@ -27,8 +27,8 @@
 }
 
 - (IBAction)goToUIKitAction:(UIButton *)sender {
-    UIKitController *UVC = [UIKitController new];
-    [self.navigationController pushViewController:UVC animated:YES];
+    UKController *FVC = [UKController new];
+    [self.navigationController pushViewController:FVC animated:YES];
 }
 
 @end

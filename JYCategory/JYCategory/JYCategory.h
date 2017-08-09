@@ -9,6 +9,7 @@
 #ifndef JYCategory_h
 #define JYCategory_h
 
+//Foundation
 #import "NSArray+JYSafe.h"
 #import "NSArray+JYLog.h"
 #import "NSDictionary+JYSafe.h"
@@ -22,5 +23,9 @@
 #import "NSUserDefaults+JYSafe.h"
 #import "NSData+JYHandle.h"
 #import "NSDate+JYHandle.h"
+
+//UIKit
+#import "UIDevice+JYInfo.h"
+
 
 #endif /* JYCategory_h */
