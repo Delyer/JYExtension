@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
+/*
+ *获取设备信息的相关方法
+ */
+
 #import <UIKit/UIKit.h>
 
 @interface UIDevice (JYInfo)

@@ -49,15 +49,39 @@
                         <action selector="test_UIAlertView_JYBlock:" destination="-1" eventType="touchUpInside" id="YPf-5t-Cbx"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xW-Rp-xjK">
+                    <rect key="frame" x="10" y="220" width="113" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="u0Z-1y-R27"/>
+                    </constraints>
+                    <state key="normal" title="UIView+JYEvent"/>
+                    <connections>
+                        <action selector="test_UIView_JYEvent:" destination="-1" eventType="touchUpInside" id="Cmw-C9-Iaf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olj-To-FcB">
+                    <rect key="frame" x="10" y="260" width="118" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="1Ke-jv-aT6"/>
+                    </constraints>
+                    <state key="normal" title="UIView+JYFrame"/>
+                    <connections>
+                        <action selector="test_UIView_JYFrame:" destination="-1" eventType="touchUpInside" id="6dD-kw-1Xv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hHm-qS-jco" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="1ce-3g-fjs"/>
+                <constraint firstItem="olj-To-FcB" firstAttribute="top" secondItem="5xW-Rp-xjK" secondAttribute="bottom" constant="20" id="6Pu-wW-BCg"/>
                 <constraint firstItem="HWf-5P-TQs" firstAttribute="top" secondItem="hHm-qS-jco" secondAttribute="bottom" constant="20" id="G6Q-Xg-M71"/>
                 <constraint firstItem="hHm-qS-jco" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="P6e-ms-Wum"/>
                 <constraint firstItem="xlQ-Xe-YA7" firstAttribute="top" secondItem="HWf-5P-TQs" secondAttribute="bottom" constant="20" id="Q0m-S4-925"/>
                 <constraint firstItem="xlQ-Xe-YA7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bMP-Ky-VK9"/>
                 <constraint firstItem="HWf-5P-TQs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dJ3-wv-Eds"/>
+                <constraint firstItem="5xW-Rp-xjK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="hfx-jq-BAu"/>
+                <constraint firstItem="5xW-Rp-xjK" firstAttribute="top" secondItem="xlQ-Xe-YA7" secondAttribute="bottom" constant="20" id="ifD-Ci-TGw"/>
+                <constraint firstItem="olj-To-FcB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qwv-NB-UaE"/>
             </constraints>
         </view>
     </objects>

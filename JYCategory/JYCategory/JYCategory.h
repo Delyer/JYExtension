@@ -28,6 +28,9 @@
 #import "UIDevice+JYInfo.h"
 #import "UIColor+JYCommon.h"
 #import "UIAlertView+JYBlock.h"
-
+#import "UIView+JYEvent.h"
+#import "UIView+JYFrame.h"
+#import "UIView+JYCommon.h"
+#import "UIView+JYLocation.h"
 
 #endif /* JYCategory_h */

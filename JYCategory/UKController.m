@@ -58,8 +58,60 @@
         NSLog(@"你点击的索引为%ld",buttonIndex);
      
     } title:@"你好" message:@"hello world" cancelButtonTitle:@"取消" otherButtonTitles:@"11",@"22"@"33", nil];
-    
-    
 }
+
+#pragma mark - -----------------testUIView-----------------
+- (IBAction)test_UIView_JYEvent:(UIButton *)sender{
+    //给self.view传参数和添加点击事件
+    self.view.param = @{@"1":@"one"};
+    [self.view addTapActionWithBlock:^(NSDictionary *param) {
+        NSLog(@"你点击了self.view,param = %@",param);
+        //自定义处理事件
+    }];
+    
+
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, [UIDevice getDeviceScreenHeight] - 50, 50, 50)];
+    imageView.backgroundColor = [UIColor purpleColor];
+    imageView.tag = 100;
+    [self.view addSubview:imageView];
+    
+    //给imageView添加点击事件
+    imageView.param = @{@"param":@"这是参数"};
+    [imageView addTapActionWithBlock:^(NSDictionary *param) {
+        NSLog(@"你点击了imageView,param = %@",param);
+        //自定义处理事件
+    }];
+    
+    //给imageView添加长按事件
+    [imageView addLongPressActionWithBlock:^(NSDictionary *param) {
+        NSLog(@"你长按了imageView,param = %@",param);
+        //自定义处理事件
+    }];
+    
+    [UIAlertView alertWithCallBackBlock:nil title:nil message:@"请点击self.view或者imageView即可触发点击事件" cancelButtonTitle:@"确定" otherButtonTitles:nil];
+}
+
+- (IBAction)test_UIView_JYFrame:(UIButton *)sender{
+    UIView *view = self.view;
+    NSLog(@"上 = %f，左 = %f，下 = %f，右 = %f, 宽 = %f, 高 = %f,中心x = %f,中心y = %f",view.top,view.left,view.bottom,view.right,view.width,view.height,view.centerX,view.centerY);
+    
+    NSLog(@"self.View所在的viewController = %@",[self.view viewController]);
+    NSLog(@"self.View所在的viewControllerName = %@",[self.view viewControllerName]);
+    
+    //设置圆角
+    [self.view setCornerRadius:5 borderWidth:1 borderColor:[UIColor redColor]];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, [UIDevice getDeviceScreenHeight] - 50, 50, 50)];
+    imageView.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:imageView];
+    
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+    [imageView addSubview:view1];
+    
+    NSLog(@"目标转换坐标 = %@",NSStringFromCGRect([imageView convertSubview:view1 toTargetView:self.view]));
+    NSLog(@"目标转换坐标 = %@",NSStringFromCGRect([self.view convertView:view1]));
+
+}
+
 
 @end

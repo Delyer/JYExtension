@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
+/*
+ *UIAlertView的block方法
+ */
+
 #import <UIKit/UIKit.h>
 
 typedef void (^UIAlertViewCallBackBlock)(NSInteger buttonIndex);

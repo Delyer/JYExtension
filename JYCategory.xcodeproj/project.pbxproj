@@ -27,6 +27,10 @@
 		A3B136B01F339F78005C6AF5 /* NSArray+JYLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136AF1F339F78005C6AF5 /* NSArray+JYLog.m */; };
 		A3B136B41F33D0E6005C6AF5 /* FoundationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B136B21F33D0E6005C6AF5 /* FoundationController.m */; };
 		A3B136B51F33D0E6005C6AF5 /* FoundationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */; };
+		A3E6B9AC1F3CCB6700B64EC0 /* UIView+JYEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6B9AB1F3CCB6700B64EC0 /* UIView+JYEvent.m */; };
+		A3E6B9AF1F3CDAD800B64EC0 /* UIView+JYFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6B9AE1F3CDAD800B64EC0 /* UIView+JYFrame.m */; };
+		A3E6B9B21F3D055F00B64EC0 /* UIView+JYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6B9B11F3D055F00B64EC0 /* UIView+JYCommon.m */; };
+		A3E6B9B51F3D170500B64EC0 /* UIView+JYLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6B9B41F3D170500B64EC0 /* UIView+JYLocation.m */; };
 		A3F53E1F1F3B7CB30031599D /* NSUserDefaults+JYSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */; };
 		A3F53E221F3B83CC0031599D /* NSData+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E211F3B83CC0031599D /* NSData+JYHandle.m */; };
 		A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E251F3B85C90031599D /* NSDate+JYHandle.m */; };
@@ -76,6 +80,14 @@
 		A3B136B11F33D0E6005C6AF5 /* FoundationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationController.h; sourceTree = "<group>"; };
 		A3B136B21F33D0E6005C6AF5 /* FoundationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationController.m; sourceTree = "<group>"; };
 		A3B136B31F33D0E6005C6AF5 /* FoundationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoundationController.xib; sourceTree = "<group>"; };
+		A3E6B9AA1F3CCB6700B64EC0 /* UIView+JYEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JYEvent.h"; sourceTree = "<group>"; };
+		A3E6B9AB1F3CCB6700B64EC0 /* UIView+JYEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JYEvent.m"; sourceTree = "<group>"; };
+		A3E6B9AD1F3CDAD800B64EC0 /* UIView+JYFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JYFrame.h"; sourceTree = "<group>"; };
+		A3E6B9AE1F3CDAD800B64EC0 /* UIView+JYFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JYFrame.m"; sourceTree = "<group>"; };
+		A3E6B9B01F3D055F00B64EC0 /* UIView+JYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JYCommon.h"; sourceTree = "<group>"; };
+		A3E6B9B11F3D055F00B64EC0 /* UIView+JYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JYCommon.m"; sourceTree = "<group>"; };
+		A3E6B9B31F3D170500B64EC0 /* UIView+JYLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JYLocation.h"; sourceTree = "<group>"; };
+		A3E6B9B41F3D170500B64EC0 /* UIView+JYLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JYLocation.m"; sourceTree = "<group>"; };
 		A3F53E1D1F3B7CB30031599D /* NSUserDefaults+JYSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+JYSafe.h"; sourceTree = "<group>"; };
 		A3F53E1E1F3B7CB30031599D /* NSUserDefaults+JYSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JYSafe.m"; sourceTree = "<group>"; };
 		A3F53E201F3B83CC0031599D /* NSData+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JYHandle.h"; sourceTree = "<group>"; };
@@ -248,9 +260,12 @@
 		A3B136AB1F339E9E005C6AF5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A3F53E3C1F3BDA1C0031599D /* UIAlertView */,
+				A3E6B9A61F3CCB2E00B64EC0 /* UIView */,
 				A3F53E341F3BCFA80031599D /* UIColor */,
+				A3E6B9A41F3CC77200B64EC0 /* UIImage */,
 				A3F53E351F3BCFA80031599D /* UIDevice */,
+				A3F53E3C1F3BDA1C0031599D /* UIAlertView */,
+				A3E6B9A51F3CC77200B64EC0 /* UIImageView */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -275,6 +290,35 @@
 				A31FEA621F352A3E00EC33E1 /* NSDictionary+JYURL.m */,
 			);
 			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		A3E6B9A41F3CC77200B64EC0 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		A3E6B9A51F3CC77200B64EC0 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		A3E6B9A61F3CCB2E00B64EC0 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6B9AA1F3CCB6700B64EC0 /* UIView+JYEvent.h */,
+				A3E6B9AB1F3CCB6700B64EC0 /* UIView+JYEvent.m */,
+				A3E6B9AD1F3CDAD800B64EC0 /* UIView+JYFrame.h */,
+				A3E6B9AE1F3CDAD800B64EC0 /* UIView+JYFrame.m */,
+				A3E6B9B01F3D055F00B64EC0 /* UIView+JYCommon.h */,
+				A3E6B9B11F3D055F00B64EC0 /* UIView+JYCommon.m */,
+				A3E6B9B31F3D170500B64EC0 /* UIView+JYLocation.h */,
+				A3E6B9B41F3D170500B64EC0 /* UIView+JYLocation.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		A3F53E1B1F3B7C7B0031599D /* NSData */ = {
@@ -413,14 +457,18 @@
 				A33683B01F3A262D001D051F /* JYSwizzing.m in Sources */,
 				A387780A1F39227B004C90F4 /* NSString+JYURLEncode.m in Sources */,
 				A3F53E3B1F3BD1CF0031599D /* UIColor+JYCommon.m in Sources */,
+				A3E6B9AF1F3CDAD800B64EC0 /* UIView+JYFrame.m in Sources */,
 				A3B136A41F339D7A005C6AF5 /* ViewController.m in Sources */,
 				A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */,
 				A38778131F393550004C90F4 /* NSString+JYTransform.m in Sources */,
 				A3F53E221F3B83CC0031599D /* NSData+JYHandle.m in Sources */,
+				A3E6B9AC1F3CCB6700B64EC0 /* UIView+JYEvent.m in Sources */,
 				A33683BA1F3A3B92001D051F /* JY3DES.m in Sources */,
 				A387780D1F392735004C90F4 /* NSString+JYJudge.m in Sources */,
+				A3E6B9B51F3D170500B64EC0 /* UIView+JYLocation.m in Sources */,
 				A31FEA631F352A3E00EC33E1 /* NSDictionary+JYURL.m in Sources */,
 				A3B136B41F33D0E6005C6AF5 /* FoundationController.m in Sources */,
+				A3E6B9B21F3D055F00B64EC0 /* UIView+JYCommon.m in Sources */,
 				A3B136B01F339F78005C6AF5 /* NSArray+JYLog.m in Sources */,
 				A3F53E321F3BBEEC0031599D /* UKController.m in Sources */,
 				A33683B31F3A2665001D051F /* JYBase64.m in Sources */,
