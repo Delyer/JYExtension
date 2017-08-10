@@ -39,12 +39,24 @@
                         <action selector="test_UIColor_JYCommon:" destination="-1" eventType="touchUpInside" id="e33-Vu-5bN"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlQ-Xe-YA7">
+                    <rect key="frame" x="10" y="180" width="145" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="LIA-m3-Nv3"/>
+                    </constraints>
+                    <state key="normal" title="UIAlertView+JYBlock"/>
+                    <connections>
+                        <action selector="test_UIAlertView_JYBlock:" destination="-1" eventType="touchUpInside" id="YPf-5t-Cbx"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hHm-qS-jco" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="1ce-3g-fjs"/>
                 <constraint firstItem="HWf-5P-TQs" firstAttribute="top" secondItem="hHm-qS-jco" secondAttribute="bottom" constant="20" id="G6Q-Xg-M71"/>
                 <constraint firstItem="hHm-qS-jco" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="P6e-ms-Wum"/>
+                <constraint firstItem="xlQ-Xe-YA7" firstAttribute="top" secondItem="HWf-5P-TQs" secondAttribute="bottom" constant="20" id="Q0m-S4-925"/>
+                <constraint firstItem="xlQ-Xe-YA7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bMP-Ky-VK9"/>
                 <constraint firstItem="HWf-5P-TQs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dJ3-wv-Eds"/>
             </constraints>
         </view>

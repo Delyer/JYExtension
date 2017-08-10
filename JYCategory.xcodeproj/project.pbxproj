@@ -34,6 +34,7 @@
 		A3F53E331F3BBEEC0031599D /* UKController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F53E311F3BBEEC0031599D /* UKController.xib */; };
 		A3F53E381F3BCFA80031599D /* UIDevice+JYInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */; };
 		A3F53E3B1F3BD1CF0031599D /* UIColor+JYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E3A1F3BD1CF0031599D /* UIColor+JYCommon.m */; };
+		A3F53E3F1F3BDA2B0031599D /* UIAlertView+JYBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F53E3E1F3BDA2B0031599D /* UIAlertView+JYBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,8 @@
 		A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JYInfo.m"; sourceTree = "<group>"; };
 		A3F53E391F3BD1CF0031599D /* UIColor+JYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JYCommon.h"; sourceTree = "<group>"; };
 		A3F53E3A1F3BD1CF0031599D /* UIColor+JYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JYCommon.m"; sourceTree = "<group>"; };
+		A3F53E3D1F3BDA2B0031599D /* UIAlertView+JYBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+JYBlock.h"; sourceTree = "<group>"; };
+		A3F53E3E1F3BDA2B0031599D /* UIAlertView+JYBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+JYBlock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,7 @@
 		A3B136AB1F339E9E005C6AF5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A3F53E3C1F3BDA1C0031599D /* UIAlertView */,
 				A3F53E341F3BCFA80031599D /* UIColor */,
 				A3F53E351F3BCFA80031599D /* UIDevice */,
 			);
@@ -316,6 +320,15 @@
 				A3F53E371F3BCFA80031599D /* UIDevice+JYInfo.m */,
 			);
 			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		A3F53E3C1F3BDA1C0031599D /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A3F53E3D1F3BDA2B0031599D /* UIAlertView+JYBlock.h */,
+				A3F53E3E1F3BDA2B0031599D /* UIAlertView+JYBlock.m */,
+			);
+			path = UIAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +425,7 @@
 				A3F53E321F3BBEEC0031599D /* UKController.m in Sources */,
 				A33683B31F3A2665001D051F /* JYBase64.m in Sources */,
 				A3B1368C1F339C39005C6AF5 /* main.m in Sources */,
+				A3F53E3F1F3BDA2B0031599D /* UIAlertView+JYBlock.m in Sources */,
 				A31A41B81F33ECCC00ED5406 /* NSArray+JYSafe.m in Sources */,
 				A3F53E1F1F3B7CB30031599D /* NSUserDefaults+JYSafe.m in Sources */,
 			);

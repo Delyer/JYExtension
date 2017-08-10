@@ -48,6 +48,17 @@
     UIColor *color = [UIColor getJYGradientColorFromColor:[UIColor redColor] toColor:[UIColor purpleColor] withHeight:[UIDevice getDeviceScreenHeight]];
     self.view.backgroundColor = color;
     
+}
+
+#pragma mark - -----------------testUIAlertView-----------------
+- (IBAction)test_UIAlertView_JYBlock:(UIButton *)sender {
+    
+    [UIAlertView alertWithCallBackBlock:^(NSInteger buttonIndex) {
+
+        NSLog(@"你点击的索引为%ld",buttonIndex);
+     
+    } title:@"你好" message:@"hello world" cancelButtonTitle:@"取消" otherButtonTitles:@"11",@"22"@"33", nil];
+    
     
 }
 
