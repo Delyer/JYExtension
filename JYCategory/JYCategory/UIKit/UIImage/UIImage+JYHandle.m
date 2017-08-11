@@ -84,6 +84,17 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     return subImage;
 }
 
+//根据颜色和大小获取一张图片
++ (instancetype)imageWithColor:(UIColor *)color size:(CGSize)size{
+    UIGraphicsBeginImageContextWithOptions(size, 0, [UIScreen mainScreen].scale);
+    [color set];
+    UIRectFill(CGRectMake(0, 0, size.width, size.height));
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+
 //对图片自定义角度旋转（以中心点为旋转点，以°为旋转单位，如90°）
 + (instancetype)customImageRotate:(UIImage *)image rotatedDegrees:(CGFloat)degrees{
     
@@ -149,6 +160,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     
     return iconImage;
 }
+
 
 
 @end

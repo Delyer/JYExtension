@@ -52,6 +52,17 @@
 + (instancetype)customCutImage:(UIImage *)image AtRect:(CGRect)rect;
 
 /**
+ *  根据颜色和大小获取一张图片
+ *
+ *  @param color   颜色
+ *  @param size    大小
+ *
+ *  @return 图片
+ */
++ (instancetype)imageWithColor:(UIColor *)color size:(CGSize)size;
+
+
+/**
  *  对图片自定义角度旋转（以中心点为旋转点，以°为旋转单位，如90°）
  *
  *  @param image   需要旋转的图片
@@ -72,6 +83,8 @@
 + (instancetype)customImageRotate:(UIImage *)image rotatedRadians:(CGFloat)radians;
 
 + (instancetype)cutRoundimage:(UIImage *)image borderImage:(UIImage *)borderImage border:(int)border;
+
+
 
 
 @end
