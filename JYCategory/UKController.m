@@ -134,5 +134,26 @@
     
 }
 
+#pragma mark - -----------------testImage-----------------
+- (IBAction)test_UIImage_JYHandle:(UIButton *)sender{
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, [UIDevice getDeviceScreenHeight] - 150, 150, 150)];
+    [self.view addSubview:imageView];
+    
+    UIImage *image = [UIImage imageNamed:@"1"];
+    //对图片加水印
+    imageView.image = [UIImage waterMarkWithImage:image markImage:image location:CGRectMake(50, 50, 150, 150)];
+    
+    //等比缩放
+    imageView.image = [UIImage scaleImage:image toScale:0.1];
+    
+    //自定义剪切
+    imageView.image = [UIImage customCutImage:image AtRect:CGRectMake(1000, 500, 500, 500)];
+    
+    //自定义旋转后的图片
+    imageView.image = [UIImage customImageRotate:image rotatedRadians:M_PI/4.0];
+
+}
+
 
 @end
