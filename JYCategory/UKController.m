@@ -114,4 +114,25 @@
 }
 
 
+#pragma mark - -----------------testUIButton-----------------
+- (IBAction)test_UIButton_JYExtension:(UIButton *)sender{
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(200, [UIDevice getDeviceScreenHeight] - 50, 80, 30);
+    [button setTitle:@"点击周围" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor grayColor]];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    
+    //添加点击事件
+    [button addActionHandle:^(UIButton *button) {
+        NSLog(@"点击了按钮~");
+    }];
+    
+    //设置最小响应区域大小
+    [button setMinEventTouchSize:CGSizeMake(130, 100)];
+    
+}
+
+
 @end

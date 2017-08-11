@@ -13,6 +13,7 @@
 		A33683B01F3A262D001D051F /* JYSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = A33683AF1F3A262D001D051F /* JYSwizzing.m */; };
 		A33683B31F3A2665001D051F /* JYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A33683B21F3A2665001D051F /* JYBase64.m */; };
 		A33683BA1F3A3B92001D051F /* JY3DES.m in Sources */ = {isa = PBXBuildFile; fileRef = A33683B91F3A3B92001D051F /* JY3DES.m */; };
+		A36273781F3E2D48001B7DA2 /* UIButton+JYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A36273771F3E2D48001B7DA2 /* UIButton+JYExtension.m */; };
 		A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A38778051F38D4C9004C90F4 /* NSFileManager+JYPath.m */; };
 		A387780A1F39227B004C90F4 /* NSString+JYURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = A38778091F39227B004C90F4 /* NSString+JYURLEncode.m */; };
 		A387780D1F392735004C90F4 /* NSString+JYJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = A387780C1F392735004C90F4 /* NSString+JYJudge.m */; };
@@ -55,6 +56,8 @@
 		A33683B21F3A2665001D051F /* JYBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYBase64.m; sourceTree = "<group>"; };
 		A33683B81F3A3B92001D051F /* JY3DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JY3DES.h; sourceTree = "<group>"; };
 		A33683B91F3A3B92001D051F /* JY3DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JY3DES.m; sourceTree = "<group>"; };
+		A36273761F3E2D48001B7DA2 /* UIButton+JYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JYExtension.h"; sourceTree = "<group>"; };
+		A36273771F3E2D48001B7DA2 /* UIButton+JYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JYExtension.m"; sourceTree = "<group>"; };
 		A38778041F38D4C9004C90F4 /* NSFileManager+JYPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+JYPath.h"; sourceTree = "<group>"; };
 		A38778051F38D4C9004C90F4 /* NSFileManager+JYPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+JYPath.m"; sourceTree = "<group>"; };
 		A38778081F39227B004C90F4 /* NSString+JYURLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JYURLEncode.h"; sourceTree = "<group>"; };
@@ -162,6 +165,15 @@
 			path = 3DES;
 			sourceTree = "<group>";
 		};
+		A362736F1F3E2CD8001B7DA2 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				A36273761F3E2D48001B7DA2 /* UIButton+JYExtension.h */,
+				A36273771F3E2D48001B7DA2 /* UIButton+JYExtension.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		A38778071F3921A6004C90F4 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +272,7 @@
 		A3B136AB1F339E9E005C6AF5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A362736F1F3E2CD8001B7DA2 /* UIButton */,
 				A3E6B9A61F3CCB2E00B64EC0 /* UIView */,
 				A3F53E341F3BCFA80031599D /* UIColor */,
 				A3E6B9A41F3CC77200B64EC0 /* UIImage */,
@@ -459,6 +472,7 @@
 				A3F53E3B1F3BD1CF0031599D /* UIColor+JYCommon.m in Sources */,
 				A3E6B9AF1F3CDAD800B64EC0 /* UIView+JYFrame.m in Sources */,
 				A3B136A41F339D7A005C6AF5 /* ViewController.m in Sources */,
+				A36273781F3E2D48001B7DA2 /* UIButton+JYExtension.m in Sources */,
 				A3B1368F1F339C39005C6AF5 /* AppDelegate.m in Sources */,
 				A38778131F393550004C90F4 /* NSString+JYTransform.m in Sources */,
 				A3F53E221F3B83CC0031599D /* NSData+JYHandle.m in Sources */,

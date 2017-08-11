@@ -32,5 +32,6 @@
 #import "UIView+JYFrame.h"
 #import "UIView+JYCommon.h"
 #import "UIView+JYLocation.h"
+#import "UIButton+JYExtension.h"
 
 #endif /* JYCategory_h */

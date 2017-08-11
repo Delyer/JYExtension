@@ -69,6 +69,16 @@
                         <action selector="test_UIView_JYFrame:" destination="-1" eventType="touchUpInside" id="6dD-kw-1Xv"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yK2-IS-2WK">
+                    <rect key="frame" x="10" y="300" width="154" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="B6j-LY-GXc"/>
+                    </constraints>
+                    <state key="normal" title="UIButton+JYExtension"/>
+                    <connections>
+                        <action selector="test_UIButton_JYExtension:" destination="-1" eventType="touchUpInside" id="1yE-eg-Vph"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -79,6 +89,8 @@
                 <constraint firstItem="xlQ-Xe-YA7" firstAttribute="top" secondItem="HWf-5P-TQs" secondAttribute="bottom" constant="20" id="Q0m-S4-925"/>
                 <constraint firstItem="xlQ-Xe-YA7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="bMP-Ky-VK9"/>
                 <constraint firstItem="HWf-5P-TQs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dJ3-wv-Eds"/>
+                <constraint firstItem="yK2-IS-2WK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dTs-DU-yEJ"/>
+                <constraint firstItem="yK2-IS-2WK" firstAttribute="top" secondItem="olj-To-FcB" secondAttribute="bottom" constant="20" id="eSE-St-T6X"/>
                 <constraint firstItem="5xW-Rp-xjK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="hfx-jq-BAu"/>
                 <constraint firstItem="5xW-Rp-xjK" firstAttribute="top" secondItem="xlQ-Xe-YA7" secondAttribute="bottom" constant="20" id="ifD-Ci-TGw"/>
                 <constraint firstItem="olj-To-FcB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qwv-NB-UaE"/>
