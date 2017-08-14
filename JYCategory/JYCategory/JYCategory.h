@@ -37,5 +37,6 @@
 #import "UIView+JYLocation.h"
 #import "UIButton+JYExtension.h"
 #import "UIImage+JYHandle.h"
+#import "UIWindow+JYInfo.h"
 
 #endif /* JYCategory_h */

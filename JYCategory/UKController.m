@@ -152,7 +152,9 @@
     
     //自定义旋转后的图片
     imageView.image = [UIImage customImageRotate:image rotatedRadians:M_PI/4.0];
-
+    UIViewController *vc = [UIWindow getCurrentVC];
+    
+    NSLog(@"当前vc = %@",vc);
 }
 
 
