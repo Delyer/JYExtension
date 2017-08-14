@@ -13,6 +13,10 @@
 		A33683B01F3A262D001D051F /* JYSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = A33683AF1F3A262D001D051F /* JYSwizzing.m */; };
 		A33683B31F3A2665001D051F /* JYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A33683B21F3A2665001D051F /* JYBase64.m */; };
 		A33683BA1F3A3B92001D051F /* JY3DES.m in Sources */ = {isa = PBXBuildFile; fileRef = A33683B91F3A3B92001D051F /* JY3DES.m */; };
+		A340684A1F4226AB003622B8 /* NSNumber+JYNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = A34068491F4226AB003622B8 /* NSNumber+JYNumber.m */; };
+		A340684E1F422978003622B8 /* NSError+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A340684D1F422978003622B8 /* NSError+JYHandle.m */; };
+		A34068561F42505A003622B8 /* JYWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A34068551F42505A003622B8 /* JYWeakTimer.m */; };
+		A340685D1F4254AA003622B8 /* NSURL+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A340685C1F4254AA003622B8 /* NSURL+JYHandle.m */; };
 		A36273781F3E2D48001B7DA2 /* UIButton+JYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A36273771F3E2D48001B7DA2 /* UIButton+JYExtension.m */; };
 		A36273811F3E6A34001B7DA2 /* UIImage+JYHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A36273801F3E6A34001B7DA2 /* UIImage+JYHandle.m */; };
 		A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A38778051F38D4C9004C90F4 /* NSFileManager+JYPath.m */; };
@@ -57,6 +61,14 @@
 		A33683B21F3A2665001D051F /* JYBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYBase64.m; sourceTree = "<group>"; };
 		A33683B81F3A3B92001D051F /* JY3DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JY3DES.h; sourceTree = "<group>"; };
 		A33683B91F3A3B92001D051F /* JY3DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JY3DES.m; sourceTree = "<group>"; };
+		A34068481F4226AB003622B8 /* NSNumber+JYNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JYNumber.h"; sourceTree = "<group>"; };
+		A34068491F4226AB003622B8 /* NSNumber+JYNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JYNumber.m"; sourceTree = "<group>"; };
+		A340684C1F422978003622B8 /* NSError+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+JYHandle.h"; sourceTree = "<group>"; };
+		A340684D1F422978003622B8 /* NSError+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+JYHandle.m"; sourceTree = "<group>"; };
+		A34068541F42505A003622B8 /* JYWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWeakTimer.h; sourceTree = "<group>"; };
+		A34068551F42505A003622B8 /* JYWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWeakTimer.m; sourceTree = "<group>"; };
+		A340685B1F4254AA003622B8 /* NSURL+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+JYHandle.h"; sourceTree = "<group>"; };
+		A340685C1F4254AA003622B8 /* NSURL+JYHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+JYHandle.m"; sourceTree = "<group>"; };
 		A36273761F3E2D48001B7DA2 /* UIButton+JYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JYExtension.h"; sourceTree = "<group>"; };
 		A36273771F3E2D48001B7DA2 /* UIButton+JYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JYExtension.m"; sourceTree = "<group>"; };
 		A362737F1F3E6A34001B7DA2 /* UIImage+JYHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JYHandle.h"; sourceTree = "<group>"; };
@@ -136,6 +148,7 @@
 			children = (
 				A33683B41F3A3B25001D051F /* 3DES */,
 				A33683AC1F3A262D001D051F /* Base64 */,
+				A34068531F42505A003622B8 /* WeakTimer */,
 				A33683AD1F3A262D001D051F /* SwizzMethod */,
 			);
 			path = Core;
@@ -166,6 +179,42 @@
 				A33683B91F3A3B92001D051F /* JY3DES.m */,
 			);
 			path = 3DES;
+			sourceTree = "<group>";
+		};
+		A34068471F42267F003622B8 /* NSNumber */ = {
+			isa = PBXGroup;
+			children = (
+				A34068481F4226AB003622B8 /* NSNumber+JYNumber.h */,
+				A34068491F4226AB003622B8 /* NSNumber+JYNumber.m */,
+			);
+			path = NSNumber;
+			sourceTree = "<group>";
+		};
+		A340684B1F4228FE003622B8 /* NSError */ = {
+			isa = PBXGroup;
+			children = (
+				A340684C1F422978003622B8 /* NSError+JYHandle.h */,
+				A340684D1F422978003622B8 /* NSError+JYHandle.m */,
+			);
+			path = NSError;
+			sourceTree = "<group>";
+		};
+		A34068531F42505A003622B8 /* WeakTimer */ = {
+			isa = PBXGroup;
+			children = (
+				A34068541F42505A003622B8 /* JYWeakTimer.h */,
+				A34068551F42505A003622B8 /* JYWeakTimer.m */,
+			);
+			path = WeakTimer;
+			sourceTree = "<group>";
+		};
+		A34068571F425465003622B8 /* NSURL */ = {
+			isa = PBXGroup;
+			children = (
+				A340685B1F4254AA003622B8 /* NSURL+JYHandle.h */,
+				A340685C1F4254AA003622B8 /* NSURL+JYHandle.m */,
+			);
+			path = NSURL;
 			sourceTree = "<group>";
 		};
 		A362736F1F3E2CD8001B7DA2 /* UIButton */ = {
@@ -261,10 +310,13 @@
 		A3B136AA1F339E9E005C6AF5 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				A34068571F425465003622B8 /* NSURL */,
 				A3F53E1B1F3B7C7B0031599D /* NSData */,
 				A3F53E231F3B857E0031599D /* NSDate */,
 				A3B136AC1F339F2D005C6AF5 /* NSArray */,
+				A340684B1F4228FE003622B8 /* NSError */,
 				A38778071F3921A6004C90F4 /* NSString */,
+				A34068471F42267F003622B8 /* NSNumber */,
 				A3B136AD1F339F2D005C6AF5 /* NSDictionary */,
 				A31FEA641F353D9C00EC33E1 /* NSFileManager */,
 				A3F53E1C1F3B7C7B0031599D /* NSUserDefaults */,
@@ -468,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F53E381F3BCFA80031599D /* UIDevice+JYInfo.m in Sources */,
+				A34068561F42505A003622B8 /* JYWeakTimer.m in Sources */,
 				A31FEA601F34E41700EC33E1 /* NSDictionary+JYSafe.m in Sources */,
 				A3F53E261F3B85C90031599D /* NSDate+JYHandle.m in Sources */,
 				A38778061F38D4C9004C90F4 /* NSFileManager+JYPath.m in Sources */,
@@ -492,7 +545,10 @@
 				A3F53E321F3BBEEC0031599D /* UKController.m in Sources */,
 				A33683B31F3A2665001D051F /* JYBase64.m in Sources */,
 				A3B1368C1F339C39005C6AF5 /* main.m in Sources */,
+				A340685D1F4254AA003622B8 /* NSURL+JYHandle.m in Sources */,
+				A340684A1F4226AB003622B8 /* NSNumber+JYNumber.m in Sources */,
 				A3F53E3F1F3BDA2B0031599D /* UIAlertView+JYBlock.m in Sources */,
+				A340684E1F422978003622B8 /* NSError+JYHandle.m in Sources */,
 				A31A41B81F33ECCC00ED5406 /* NSArray+JYSafe.m in Sources */,
 				A36273811F3E6A34001B7DA2 /* UIImage+JYHandle.m in Sources */,
 				A3F53E1F1F3B7CB30031599D /* NSUserDefaults+JYSafe.m in Sources */,

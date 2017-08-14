@@ -23,6 +23,9 @@
 #import "NSUserDefaults+JYSafe.h"
 #import "NSData+JYHandle.h"
 #import "NSDate+JYHandle.h"
+#import "NSNumber+JYNumber.h"
+#import "NSError+JYHandle.h"
+#import "NSURL+JYHandle.h"
 
 //UIKit
 #import "UIDevice+JYInfo.h"
