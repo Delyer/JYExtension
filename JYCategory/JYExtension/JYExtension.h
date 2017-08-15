@@ -1,13 +1,13 @@
 //
-//  JYCategory.h
-//  JYCategory
+//  JYExtension.h
+//  JYExtension
 //
 //  Created by Dely on 2017/8/3.
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
-#ifndef JYCategory_h
-#define JYCategory_h
+#ifndef JYExtension_h
+#define JYExtension_h
 
 //Foundation
 #import "NSArray+JYSafe.h"

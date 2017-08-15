@@ -7,8 +7,7 @@
 //
 
 #import "FoundationController.h"
-#import "JYCategory.h"
-#import "JY3DES.h"
+#import "JYExtension.h"
 
 @interface FoundationController ()
 

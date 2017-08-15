@@ -7,7 +7,7 @@
 //
 
 #import "UKController.h"
-#import "JYCategory.h"
+#import "JYExtension.h"
 #import "JYThreadMethod.h"
 
 @interface UKController ()
