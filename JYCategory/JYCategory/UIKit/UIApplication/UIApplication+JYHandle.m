@@ -19,11 +19,8 @@
     }
 }
 
-+ (void)goToSystemSetting{
-    [UIApplication quickOpenURLString:@"App-prefs:root="];
-}
 
-+ (void)goToSetting{
++ (void)goToAppSetting{
     [UIApplication quickOpenURLString:UIApplicationOpenSettingsURLString];
 }
 
@@ -32,8 +29,29 @@
     [UIApplication quickOpenURLString:urlString];
 }
 
-+ (void)goToWifi{
-    [UIApplication quickOpenURLString:@"App-Prefs:root=WIFI"];
++ (void)goToSettingWith:(JYPrefsType)prefsType{
+     NSArray *rootPaths  =  @[@"App-Prefs:root",
+                              @"App-Prefs:root=WIFI",
+                              @"App-Prefs:root=Bluetooth",
+                              @"App-Prefs:root=MOBILE_DATA_SETTINGS_ID",
+                              @"App-Prefs:root=INTERNET_TETHERING",
+                              @"App-Prefs:root=Carrier",
+                              @"App-Prefs:root=NOTIFICATIONS_ID",
+                              @"App-Prefs:root=General",
+                              @"App-Prefs:root=General&path=About",
+                              @"App-Prefs:root=General&path=Keyboard",
+                              @"App-Prefs:root=General&path=ACCESSIBILITY",
+                              @"App-Prefs:root=General&path=INTERNATIONAL",
+                              @"App-Prefs:root=Wallpaper",
+                              @"App-Prefs:root=SIRI",
+                              @"App-Prefs:root=Privacy",
+                              @"App-Prefs:root=SAFARI",
+                              @"App-Prefs:root=MUSIC",
+                              @"App-Prefs:root=Photos",
+                              @"App-Prefs:root=FACETIME"];
+    
+    NSString *urlString = [rootPaths objectAtIndex:(NSUInteger)prefsType];
+    [UIApplication quickOpenURLString:urlString];
 }
 
 

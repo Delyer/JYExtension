@@ -159,6 +159,7 @@
     
     UIViewController *vc = [UIWindow getCurrentVC];
     NSLog(@"当前vc = %@",vc);
+
 }
 
 

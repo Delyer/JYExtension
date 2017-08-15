@@ -26,6 +26,7 @@
 #import "NSNumber+JYNumber.h"
 #import "NSError+JYHandle.h"
 #import "NSURL+JYHandle.h"
+#import "NSObject+encode.h"
 
 //UIKit
 #import "UIDevice+JYInfo.h"
@@ -38,11 +39,15 @@
 #import "UIButton+JYExtension.h"
 #import "UIImage+JYHandle.h"
 #import "UIWindow+JYInfo.h"
+#import "UIApplication+JYHandle.h"
 
-//core
+//CoreMethod
 #import "JYBase64.h"
 #import "JY3DES.h"
 #import "JYWeakTimer.h"
 #import "JYThreadMethod.h"
+
+//Macro
+#import "JYDeviceMacro.h"
 
 #endif /* JYCategory_h */
