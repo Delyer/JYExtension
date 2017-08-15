@@ -13,6 +13,8 @@
 #import <mach/mach.h>
 #import <objc/runtime.h>
 #import <sys/mount.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 
 @implementation UIDevice (JYInfo)
 
@@ -99,6 +101,11 @@
     if ([platform isEqualToString:@"x86_64"])       return [UIDevice currentDevice].model;
     
     return platform;
+}
+
+// 获取BundleID
++ (NSString*)getBundleID{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
 }
 
 // 获取app版本号
@@ -224,6 +231,13 @@
 + (NSString *)getDeviceLanguage {
     NSArray *languageArray = [NSLocale preferredLanguages];
     return [languageArray firstObject];
+}
+
+// 获取运营商名称
++ (NSString *)getCarrierName {
+    CTTelephonyNetworkInfo *telephonyInfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier *carrier = [telephonyInfo subscriberCellularProvider];
+    return  [carrier carrierName];
 }
 
 

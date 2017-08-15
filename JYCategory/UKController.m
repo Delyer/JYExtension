@@ -25,6 +25,7 @@
     NSLog(@"屏幕宽和高 w = %f, h = %f",[UIDevice getDeviceScreenWidth],[UIDevice getDeviceScreenHeight]);
     NSLog(@"设备的名字 = %@",[UIDevice getDeviceName]);
     NSLog(@"设备型号 = %@",[UIDevice getDeviceTypeName]);
+    NSLog(@"bundleID = %@",[UIDevice getBundleID]);
     NSLog(@"app版本号 = %@",[UIDevice getAPPVerion]);
     NSLog(@"app_build版本号 = %@",[UIDevice getAPPBuildVersion]);
     NSLog(@"appName = %@",[UIDevice getAPPName]);
@@ -39,6 +40,7 @@
     NSLog(@"设备总磁盘容量 = %lld",[UIDevice getTotalDiskSize]);
     NSLog(@"可用磁盘容量 = %lld",[UIDevice getAvailableDiskSize]);
     NSLog(@"当前语言 = %@",[UIDevice getDeviceLanguage]);
+    NSLog(@"运营商 = %@",[UIDevice getCarrierName]);
 }
 
 #pragma mark - -----------------testDevice-----------------

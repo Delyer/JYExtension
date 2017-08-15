@@ -25,6 +25,10 @@
 // 设备类型
 + (NSString *)getDeviceTypeName;
 
+
+// 获取BundleID
++ (NSString*)getBundleID;
+
 // app版本号
 + (NSString *)getAPPVerion;
 
@@ -63,5 +67,8 @@
 
 // 获取当前语言
 + (NSString *)getDeviceLanguage;
+
+// 获取运营商名称
++ (NSString *)getCarrierName;
 
 @end
