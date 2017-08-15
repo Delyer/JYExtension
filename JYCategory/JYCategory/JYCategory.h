@@ -39,4 +39,10 @@
 #import "UIImage+JYHandle.h"
 #import "UIWindow+JYInfo.h"
 
+//core
+#import "JYBase64.h"
+#import "JY3DES.h"
+#import "JYWeakTimer.h"
+#import "JYThreadMethod.h"
+
 #endif /* JYCategory_h */

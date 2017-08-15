@@ -240,5 +240,63 @@
     return  [carrier carrierName];
 }
 
+// 获取网络类型
++ (NetworkType)getNetworkType {
+    
+    NSArray *subviews = [[[[UIApplication sharedApplication] valueForKey:@"statusBar"] valueForKey:@"foregroundView"]subviews];
+    NSNumber *dataNetworkItemView = nil;
+    
+    for (id subview in subviews) {
+        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
+            dataNetworkItemView = subview;
+            break;
+        }
+    }
+    switch ([[dataNetworkItemView valueForKey:@"dataNetworkType"]integerValue]) {
+        case 0:
+            return NetworkTypeUnknown;
+            break;
+            
+        case 1:
+            return NetworkType2G;
+            break;
+            
+        case 2:
+            return NetworkType3G;
+            break;
+            
+        case 3:
+            return NetworkType4G;
+            break;
+            
+        case 4:
+            return NetworkTypeLTE;
+            break;
+            
+        case 5:
+            return NetworkTypeWifi;
+            break;
+    }
+    
+    return NetworkTypeUnknown;
+}
+
+// 获取网络类型名称
++ (NSString *)getNetworkTypeName{
+    NetworkType type = [UIDevice getNetworkType];
+    if (type == NetworkType4G) {
+        return @"4G";
+    }else if (type == NetworkTypeWifi) {
+        return @"Wifi";
+    }else if (type == NetworkType2G) {
+        return @"2G";
+    }else if (type == NetworkType3G) {
+        return @"3G";
+    }else if (type == NetworkTypeLTE) {
+        return @"LTE";
+    }
+    return @"无服务";
+}
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "UKController.h"
 #import "JYCategory.h"
+#import "JYThreadMethod.h"
 
 @interface UKController ()
 
@@ -41,6 +42,7 @@
     NSLog(@"可用磁盘容量 = %lld",[UIDevice getAvailableDiskSize]);
     NSLog(@"当前语言 = %@",[UIDevice getDeviceLanguage]);
     NSLog(@"运营商 = %@",[UIDevice getCarrierName]);
+    NSLog(@"网络类型 = %@",[UIDevice getNetworkTypeName]);
 }
 
 #pragma mark - -----------------testDevice-----------------
@@ -154,8 +156,8 @@
     
     //自定义旋转后的图片
     imageView.image = [UIImage customImageRotate:image rotatedRadians:M_PI/4.0];
-    UIViewController *vc = [UIWindow getCurrentVC];
     
+    UIViewController *vc = [UIWindow getCurrentVC];
     NSLog(@"当前vc = %@",vc);
 }
 

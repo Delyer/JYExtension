@@ -12,6 +12,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, NetworkType) {
+    NetworkTypeUnknown = -1, //
+    NetworkType2G = 0,
+    NetworkType3G,
+    NetworkType4G,
+    NetworkTypeWifi,
+    NetworkTypeLTE
+};
+
 @interface UIDevice (JYInfo)
 
 // 屏幕宽度
@@ -70,5 +79,11 @@
 
 // 获取运营商名称
 + (NSString *)getCarrierName;
+
+// 获取网络类型(确保statusbar没有隐藏，否则获取不到）
++ (NetworkType)getNetworkType;
+
+// 获取网络类型名称(确保statusbar没有隐藏，否则获取不到）
++ (NSString *)getNetworkTypeName;
 
 @end
