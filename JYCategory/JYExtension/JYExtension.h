@@ -50,4 +50,4 @@
 //Macro
 #import "JYDeviceMacro.h"
 
-#endif /* JYCategory_h */
+#endif /* JYExtension_h */

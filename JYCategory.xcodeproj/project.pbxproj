@@ -173,8 +173,8 @@
 		A349DC251F43BF8500F20154 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				A349DC261F43BF8500F20154 /* Foundation */,
 				A349DC541F43BF8500F20154 /* UIKit */,
+				A349DC261F43BF8500F20154 /* Foundation */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -182,16 +182,16 @@
 		A349DC261F43BF8500F20154 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				A349DC271F43BF8500F20154 /* NSArray */,
+				A349DC4E1F43BF8500F20154 /* NSURL */,
 				A349DC2E1F43BF8500F20154 /* NSData */,
 				A349DC311F43BF8500F20154 /* NSDate */,
-				A349DC341F43BF8500F20154 /* NSDictionary */,
 				A349DC391F43BF8500F20154 /* NSError */,
-				A349DC3C1F43BF8500F20154 /* NSFileManager */,
-				A349DC3F1F43BF8500F20154 /* NSNumber */,
-				A349DC421F43BF8500F20154 /* NSObject */,
+				A349DC271F43BF8500F20154 /* NSArray */,
 				A349DC451F43BF8500F20154 /* NSString */,
-				A349DC4E1F43BF8500F20154 /* NSURL */,
+				A349DC421F43BF8500F20154 /* NSObject */,
+				A349DC3F1F43BF8500F20154 /* NSNumber */,
+				A349DC341F43BF8500F20154 /* NSDictionary */,
+				A349DC3C1F43BF8500F20154 /* NSFileManager */,
 				A349DC511F43BF8500F20154 /* NSUserDefaults */,
 			);
 			path = Foundation;
@@ -405,11 +405,11 @@
 			isa = PBXGroup;
 			children = (
 				A349DC741F43BF8500F20154 /* 3DES */,
-				A349DC771F43BF8500F20154 /* Base64 */,
 				A349DC7A1F43BF8500F20154 /* Macro */,
+				A349DC771F43BF8500F20154 /* Base64 */,
+				A349DC891F43BF8500F20154 /* WeakTimer */,
 				A349DC7C1F43BF8500F20154 /* SwizzMethod */,
 				A349DC7F1F43BF8500F20154 /* ThreadMethod */,
-				A349DC891F43BF8500F20154 /* WeakTimer */,
 			);
 			path = CoreMethod;
 			sourceTree = "<group>";
