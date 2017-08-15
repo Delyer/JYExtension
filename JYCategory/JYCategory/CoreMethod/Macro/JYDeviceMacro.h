@@ -9,6 +9,19 @@
 #ifndef JYDeviceMacro_h
 #define JYDeviceMacro_h
 
+// ----------------------  DEBUG 模式打印设置  ---------------------/
+#ifdef DEBUG
+#define DLog(format, ...) NSLog(format, ##__VA_ARGS__)
+#else
+#define DLog(format, ...)
+#endif
+
+#ifdef DEBUG
+#define CLog(fmt, ...) NSLog((@"文件位置=%s 方法=%s 行数=%d 打印结果=" fmt),__FILE__, __PRETTY_FUNCTION__,__LINE__, ##__VA_ARGS__);
+#else
+#define CLog(...)
+#endif
+
 // ----------------------  系统版本判断  ---------------------/
 
 #define SYS_VERSION [[UIDevice currentDevice] systemVersion]
