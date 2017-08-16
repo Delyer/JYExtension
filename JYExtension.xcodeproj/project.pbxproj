@@ -226,9 +226,9 @@
 		A349DCF51F43C55800F20154 /* JYExtension */ = {
 			isa = PBXGroup;
 			children = (
+				A349DD5D1F43C55800F20154 /* JYExtension.h */,
 				A349DCF61F43C55800F20154 /* Category */,
 				A349DD441F43C55800F20154 /* CoreMethod */,
-				A349DD5D1F43C55800F20154 /* JYExtension.h */,
 			);
 			path = JYExtension;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 		A349DCF61F43C55800F20154 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				A349DCF71F43C55800F20154 /* Foundation */,
 				A349DD251F43C55800F20154 /* UIKit */,
+				A349DCF71F43C55800F20154 /* Foundation */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -245,16 +245,16 @@
 		A349DCF71F43C55800F20154 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				A349DCF81F43C55800F20154 /* NSArray */,
+				A349DD1F1F43C55800F20154 /* NSURL */,
 				A349DCFF1F43C55800F20154 /* NSData */,
 				A349DD021F43C55800F20154 /* NSDate */,
-				A349DD051F43C55800F20154 /* NSDictionary */,
 				A349DD0A1F43C55800F20154 /* NSError */,
-				A349DD0D1F43C55800F20154 /* NSFileManager */,
-				A349DD101F43C55800F20154 /* NSNumber */,
-				A349DD131F43C55800F20154 /* NSObject */,
+				A349DCF81F43C55800F20154 /* NSArray */,
 				A349DD161F43C55800F20154 /* NSString */,
-				A349DD1F1F43C55800F20154 /* NSURL */,
+				A349DD131F43C55800F20154 /* NSObject */,
+				A349DD101F43C55800F20154 /* NSNumber */,
+				A349DD051F43C55800F20154 /* NSDictionary */,
+				A349DD0D1F43C55800F20154 /* NSFileManager */,
 				A349DD221F43C55800F20154 /* NSUserDefaults */,
 			);
 			path = Foundation;
@@ -374,14 +374,14 @@
 		A349DD251F43C55800F20154 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A349DD381F43C55800F20154 /* UIView */,
+				A349DD2F1F43C55800F20154 /* UIColor */,
+				A349DD351F43C55800F20154 /* UIImage */,
+				A349DD2C1F43C55800F20154 /* UIButton */,
+				A349DD321F43C55800F20154 /* UIDevice */,
+				A349DD411F43C55800F20154 /* UIWindow */,
 				A349DD261F43C55800F20154 /* UIAlertView */,
 				A349DD291F43C55800F20154 /* UIApplication */,
-				A349DD2C1F43C55800F20154 /* UIButton */,
-				A349DD2F1F43C55800F20154 /* UIColor */,
-				A349DD321F43C55800F20154 /* UIDevice */,
-				A349DD351F43C55800F20154 /* UIImage */,
-				A349DD381F43C55800F20154 /* UIView */,
-				A349DD411F43C55800F20154 /* UIWindow */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -468,11 +468,11 @@
 			isa = PBXGroup;
 			children = (
 				A349DD451F43C55800F20154 /* 3DES */,
-				A349DD481F43C55800F20154 /* Base64 */,
 				A349DD4B1F43C55800F20154 /* Macro */,
+				A349DD481F43C55800F20154 /* Base64 */,
+				A349DD5A1F43C55800F20154 /* WeakTimer */,
 				A349DD4D1F43C55800F20154 /* SwizzMethod */,
 				A349DD501F43C55800F20154 /* ThreadMethod */,
-				A349DD5A1F43C55800F20154 /* WeakTimer */,
 			);
 			path = CoreMethod;
 			sourceTree = "<group>";
@@ -515,15 +515,15 @@
 		A349DD501F43C55800F20154 /* ThreadMethod */ = {
 			isa = PBXGroup;
 			children = (
-				A349DD511F43C55800F20154 /* JYAsyncRun.h */,
-				A349DD521F43C55800F20154 /* JYAsyncRun.m */,
-				A349DD531F43C55800F20154 /* JYDelayRun.h */,
-				A349DD541F43C55800F20154 /* JYDelayRun.m */,
-				A349DD551F43C55800F20154 /* JYMainThreadRun.h */,
-				A349DD561F43C55800F20154 /* JYMainThreadRun.m */,
+				A349DD591F43C55800F20154 /* JYThreadMethod.h */,
 				A349DD571F43C55800F20154 /* JYOnceRun.h */,
 				A349DD581F43C55800F20154 /* JYOnceRun.m */,
-				A349DD591F43C55800F20154 /* JYThreadMethod.h */,
+				A349DD531F43C55800F20154 /* JYDelayRun.h */,
+				A349DD541F43C55800F20154 /* JYDelayRun.m */,
+				A349DD511F43C55800F20154 /* JYAsyncRun.h */,
+				A349DD521F43C55800F20154 /* JYAsyncRun.m */,
+				A349DD551F43C55800F20154 /* JYMainThreadRun.h */,
+				A349DD561F43C55800F20154 /* JYMainThreadRun.m */,
 			);
 			path = ThreadMethod;
 			sourceTree = "<group>";
@@ -811,6 +811,7 @@
 				A349DCE31F43C40200F20154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
