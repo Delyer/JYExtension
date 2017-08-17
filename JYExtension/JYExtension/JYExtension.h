@@ -6,6 +6,18 @@
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
+/*
+ * 这是一个整理项目中常用的category和方法. 提升开发效率. 持续更新.........
+ * 谢谢支持，如果喜欢，请给我个star。
+ *
+ * 作者：Delyer
+ * 简书：http://www.jianshu.com/users/e95705fe04d9    （现在写博客的主要地方）
+ * 个人博客：http://dely.vip
+ * github：https://github.com/Delyer
+ * 邮箱：jiayaoit@126.com
+ * 微信：Delyer521
+ */
+
 #ifndef JYExtension_h
 #define JYExtension_h
 
