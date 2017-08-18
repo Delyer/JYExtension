@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
+/*图片处理*/
+
 #import <UIKit/UIKit.h>
 
 @interface UIImage (JYHandle)
@@ -85,6 +87,13 @@
 + (instancetype)cutRoundimage:(UIImage *)image borderImage:(UIImage *)borderImage border:(int)border;
 
 
+//改变图片大小（不是压缩图片，会拉伸）
++ (instancetype)imageChangeSizeDrawWithImage:(UIImage *)image size:(CGSize)size;
 
+//改变图片大小（不是压缩图片，不会拉伸）
++ (instancetype)imageChangeSizeUnDrawWithImage:(UIImage *)image size:(CGSize)size;
+
+//获取圆角图片
++ (instancetype)getRadiusImage:(UIImage*)image size:(CGSize)size radius:(CGFloat)r;
 
 @end

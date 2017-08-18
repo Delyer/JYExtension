@@ -30,7 +30,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 
 //加水印
 + (instancetype)waterMarkWithImage:(UIImage *)backgroundImage markImage:(UIImage *)markImage location:(CGRect)markLocation{
-    
+
     CGFloat sizeWith = backgroundImage.size.width;
     CGFloat sizeHeight = backgroundImage.size.height;
     
@@ -159,6 +159,122 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
     
     return iconImage;
+}
+
+//改变图片大小（不是压缩图片，会拉伸）
++ (instancetype)imageChangeSizeDrawWithImage:(UIImage *)image size:(CGSize)size{
+    CGFloat destW = size.width;
+    CGFloat destH = size.height;
+    
+    CGFloat sourceW = size.width;
+    CGFloat sourceH = size.height;
+    
+    CGImageRef imageRef = image.CGImage;
+    
+    CGContextRef bitmap = CGBitmapContextCreate(NULL,destW,destH, CGImageGetBitsPerComponent(imageRef), 4*destW, CGImageGetColorSpace(imageRef),(kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst));
+    
+    CGContextDrawImage(bitmap,CGRectMake(0, 0, sourceW, sourceH), imageRef);
+    
+    CGImageRef ref = CGBitmapContextCreateImage(bitmap);
+    
+    UIImage *result = [UIImage imageWithCGImage:ref];
+    
+    CGContextRelease(bitmap);
+    CGImageRelease(ref);
+    return result;
+}
+
+//改变图片大小（不是压缩图片，不会拉伸）
++ (instancetype)imageChangeSizeUnDrawWithImage:(UIImage *)image size:(CGSize)size{
+        UIImage *newImage = nil;
+        CGSize imageSize = image.size;
+        CGFloat width = imageSize.width;
+        CGFloat height = imageSize.height;
+        CGFloat targetWidth = size.width;
+        CGFloat targetHeight = size.height;
+        CGFloat scaleFactor = 0.0;
+        CGFloat scaledWidth = targetWidth;
+        CGFloat scaledHeight = targetHeight;
+        CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    
+        if (CGSizeEqualToSize(imageSize, size) == NO) {
+            CGFloat widthFactor = targetWidth / width;
+            CGFloat heightFactor = targetHeight / height;
+            if (widthFactor < heightFactor){
+                scaleFactor = widthFactor;
+            }else{
+                scaleFactor = heightFactor;
+                scaledWidth  = width * scaleFactor;
+                scaledHeight = height * scaleFactor;
+            }
+            // center the image
+            if (widthFactor < heightFactor) {
+                thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+            } else if (widthFactor > heightFactor) {
+                thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+            }
+        }
+        // this is actually the interesting part:
+        UIGraphicsBeginImageContext(size);
+        CGRect thumbnailRect = CGRectZero;
+        thumbnailRect.origin = thumbnailPoint;
+        thumbnailRect.size.width  = scaledWidth;
+        thumbnailRect.size.height = scaledHeight;
+        [image drawInRect:thumbnailRect];
+        newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return newImage ;
+}
+
+//获取圆角图片
++ (instancetype)getRadiusImage:(UIImage*)image size:(CGSize)size radius:(CGFloat)r{
+    // the size of CGContextRef
+    int w = size.width;
+    int h = size.height;
+    
+    UIImage *img = image;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGRect rect = CGRectMake(0, 0, w, h);
+    
+    CGContextBeginPath(context);
+    JYAddRadiusToPath(context, rect, r, r);
+    CGContextClosePath(context);
+    CGContextClip(context);
+    CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
+    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
+    img = [UIImage imageWithCGImage:imageMasked];
+    
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    CGImageRelease(imageMasked);
+    
+    return img;
+}
+
+static void JYAddRadiusToPath(CGContextRef context, CGRect rect, float ovalWidth,float ovalHeight){
+    float fw, fh;
+    
+    if (ovalWidth == 0 || ovalHeight == 0){
+        CGContextAddRect(context, rect);
+        return;
+    }
+    
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
+    CGContextScaleCTM(context, ovalWidth, ovalHeight);
+    fw = CGRectGetWidth(rect) / ovalWidth;
+    fh = CGRectGetHeight(rect) / ovalHeight;
+    
+    CGContextMoveToPoint(context, fw, fh/2);  // Start at lower right corner
+    CGContextAddArcToPoint(context, fw, fh, fw/2, fh, 1);  // Top right corner
+    CGContextAddArcToPoint(context, 0, fh, 0, fh/2, 1); // Top left corner
+    CGContextAddArcToPoint(context, 0, 0, fw/2, 0, 1); // Lower left corner
+    CGContextAddArcToPoint(context, fw, 0, fw, fh/2, 1); // Back to lower right
+    
+    CGContextClosePath(context);
+    CGContextRestoreGState(context);
 }
 
 
