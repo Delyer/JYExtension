@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3399FFD1F479016002841CC /* UIImage+JYQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3399FFC1F479016002841CC /* UIImage+JYQRCode.m */; };
 		A349DCCF1F43C40200F20154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DCCE1F43C40200F20154 /* main.m */; };
 		A349DCD21F43C40200F20154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DCD11F43C40200F20154 /* AppDelegate.m */; };
 		A349DCDA1F43C40200F20154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A349DCD91F43C40200F20154 /* Assets.xcassets */; };
@@ -54,11 +53,10 @@
 		A349DD7F1F43C55800F20154 /* JYMainThreadRun.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DD561F43C55800F20154 /* JYMainThreadRun.m */; };
 		A349DD801F43C55800F20154 /* JYOnceRun.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DD581F43C55800F20154 /* JYOnceRun.m */; };
 		A349DD811F43C55800F20154 /* JYWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DD5C1F43C55800F20154 /* JYWeakTimer.m */; };
+		A3725A6F1F4E38AC00A562C9 /* UIImage+JYCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3725A6E1F4E38AC00A562C9 /* UIImage+JYCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A3399FFB1F479016002841CC /* UIImage+JYQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JYQRCode.h"; sourceTree = "<group>"; };
-		A3399FFC1F479016002841CC /* UIImage+JYQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JYQRCode.m"; sourceTree = "<group>"; };
 		A349DCCA1F43C40200F20154 /* JYExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A349DCCE1F43C40200F20154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A349DCD01F43C40200F20154 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +148,8 @@
 		A349DD5B1F43C55800F20154 /* JYWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWeakTimer.h; sourceTree = "<group>"; };
 		A349DD5C1F43C55800F20154 /* JYWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWeakTimer.m; sourceTree = "<group>"; };
 		A349DD5D1F43C55800F20154 /* JYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYExtension.h; sourceTree = "<group>"; };
+		A3725A6D1F4E38AC00A562C9 /* UIImage+JYCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JYCode.h"; sourceTree = "<group>"; };
+		A3725A6E1F4E38AC00A562C9 /* UIImage+JYCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JYCode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,10 +437,10 @@
 		A349DD351F43C55800F20154 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				A3725A6D1F4E38AC00A562C9 /* UIImage+JYCode.h */,
+				A3725A6E1F4E38AC00A562C9 /* UIImage+JYCode.m */,
 				A349DD361F43C55800F20154 /* UIImage+JYHandle.h */,
 				A349DD371F43C55800F20154 /* UIImage+JYHandle.m */,
-				A3399FFB1F479016002841CC /* UIImage+JYQRCode.h */,
-				A3399FFC1F479016002841CC /* UIImage+JYQRCode.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -618,6 +618,7 @@
 			files = (
 				A349DD741F43C55800F20154 /* UIImage+JYHandle.m in Sources */,
 				A349DD5F1F43C55800F20154 /* NSArray+JYSafe.m in Sources */,
+				A3725A6F1F4E38AC00A562C9 /* UIImage+JYCode.m in Sources */,
 				A349DD6F1F43C55800F20154 /* UIAlertView+JYBlock.m in Sources */,
 				A349DD631F43C55800F20154 /* NSDictionary+JYSafe.m in Sources */,
 				A349DD7B1F43C55800F20154 /* JYBase64.m in Sources */,
@@ -628,7 +629,6 @@
 				A349DD6C1F43C55800F20154 /* NSString+JYURLEncode.m in Sources */,
 				A349DD731F43C55800F20154 /* UIDevice+JYInfo.m in Sources */,
 				A349DD751F43C55800F20154 /* UIView+JYCommon.m in Sources */,
-				A3399FFD1F479016002841CC /* UIImage+JYQRCode.m in Sources */,
 				A349DD7E1F43C55800F20154 /* JYDelayRun.m in Sources */,
 				A349DD6E1F43C55800F20154 /* NSUserDefaults+JYSafe.m in Sources */,
 				A349DD6D1F43C55800F20154 /* NSURL+JYHandle.m in Sources */,

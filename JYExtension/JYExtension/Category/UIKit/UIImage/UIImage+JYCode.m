@@ -1,14 +1,14 @@
 //
-//  UIImage+JYQRCode.m
+//  UIImage+JYCode.m
 //  JYExtension
 //
 //  Created by Dely on 2017/8/18.
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
-#import "UIImage+JYQRCode.h"
+#import "UIImage+JYCode.h"
 
-@implementation UIImage (JYQRCode)
+@implementation UIImage (JYCode)
 
 #pragma mark - --------------------公共方法--------------------
 /*生成二维码(黑白色)*/
@@ -29,11 +29,11 @@
     if (!string || [string class] == [NSNull null]) {
         return nil;
     }
-    size = [self validateCodeSize:size];
+    size = [self validateQRCodeSize:size];
     CIImage *QRCIImage = [self getQRCIImageWithString:string];
     
-    //这个就是黑白二维码图片可以直接使用了
-    UIImage *QRImage = [self getQRImageWithCIImage:QRCIImage size:size];
+    //清晰化处理 这个就是黑白二维码图片可以直接使用了
+    UIImage *QRImage = [self getImageWithCIImage:QRCIImage size:CGSizeMake(size, size)];
     
     //处理颜色log二维码图片
     UIImage *handleQRImage = [self getColorOrLogoQRImage:QRImage foreColor:foreColor logo:logo logoRadius:radius] ;
@@ -42,10 +42,24 @@
 }
 
 
+/* 生成条形码*(iOS8.0以上适用)*/
++ (UIImage *)getBarWithString:(NSString *)string size:(CGSize)size{
+    
+    if (!string || [string class] == [NSNull null]) {
+        return nil;
+    }
+    CIImage *barCIImage = [self getBarCIImageWithString:string];
+    
+    //清晰化处理
+    UIImage *barImage = [self getImageWithCIImage:barCIImage size:size];
+    
+    return barImage;
+}
+
 
 #pragma mark - --------------------私有方法--------------------
-//获取二维码尺寸合理性的大小
-+ (CGFloat)validateCodeSize:(CGFloat)size{
+//获取二维码尺寸合理性的大小（200~屏幕宽度-40）
++ (CGFloat)validateQRCodeSize:(CGFloat)size{
     size = MAX(200, size);
     size = MIN(CGRectGetWidth([UIScreen mainScreen].bounds) - 40, size);
     return size;
@@ -67,28 +81,28 @@
 }
 
 //对图像进行清晰化处理
-+ (UIImage *)getQRImageWithCIImage:(CIImage *)image size:(CGFloat)size{
++ (UIImage *)getImageWithCIImage:(CIImage *)image size:(CGSize)size{
     
-    CGRect extent = CGRectIntegral(image.extent);
-    CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
-    size_t width = CGRectGetWidth(extent) * scale;
+    if (image) {
+        CGRect extent = CGRectIntegral(image.extent);
+        CGFloat scaleWidth = size.width/CGRectGetWidth(extent);
+        CGFloat scaleHeight = size.height/CGRectGetHeight(extent);
+        size_t width = CGRectGetWidth(extent) * scaleWidth;
+        size_t height = CGRectGetHeight(extent) * scaleHeight;
+        CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceGray();
+        CGContextRef contentRef = CGBitmapContextCreate(nil, width, height, 8, 0, colorSpaceRef, (CGBitmapInfo)kCGImageAlphaNone);
+        CIContext *context = [CIContext contextWithOptions:nil];
+        CGImageRef imageRef = [context createCGImage:image fromRect:extent];
+        CGContextSetInterpolationQuality(contentRef, kCGInterpolationNone);
+        CGContextScaleCTM(contentRef, scaleWidth, scaleHeight);
+        CGContextDrawImage(contentRef, extent, imageRef);
+        CGImageRef imageRefResized = CGBitmapContextCreateImage(contentRef);
+        CGContextRelease(contentRef);
+        CGImageRelease(imageRef);
+        return [UIImage imageWithCGImage:imageRefResized];
+    }
     
-    size_t height = CGRectGetHeight(extent) * scale;
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
-    CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 0, colorSpace, (CGBitmapInfo)kCGImageAlphaNone);
-    CIContext * context = [CIContext contextWithOptions: nil];
-    
-    CGImageRef bitmapImage = [context createCGImage: image fromRect: extent];
-    CGContextSetInterpolationQuality(bitmapRef, kCGInterpolationNone);
-    CGContextScaleCTM(bitmapRef, scale, scale);
-    CGContextDrawImage(bitmapRef, extent, bitmapImage);
-    
-    CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
-    CGContextRelease(bitmapRef);
-    CGImageRelease(bitmapImage);
-    CGColorSpaceRelease(colorSpace);
-    
-    return [UIImage imageWithCGImage:scaledImage];
+    return nil;
 }
 
 
@@ -279,6 +293,23 @@ static void JYAddRoundedRectToPath(CGContextRef context, CGRect rect, float oval
     
     CGContextClosePath(context);
     CGContextRestoreGState(context);
+}
+
+
+//获取二维码CIImage
++ (CIImage *)getBarCIImageWithString:(NSString *)string{
+    // iOS 8.0以上的系统才支持条形码的生成，iOS8.0以下使用第三方控件生成
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //注意生成条形码的编码方式
+        NSData *data = [string dataUsingEncoding: NSASCIIStringEncoding];
+        CIFilter *barFilter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
+        [barFilter setValue:data forKey:@"inputMessage"];
+        // 设置生成的条形码的上，下，左，右的margins的值
+        [barFilter setValue:@(0) forKey:@"inputQuietSpace"];
+    
+        return barFilter.outputImage;
+    }
+    return nil;
 }
 
 
