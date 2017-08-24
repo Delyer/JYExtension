@@ -277,6 +277,15 @@ static void JYAddRadiusToPath(CGContextRef context, CGRect rect, float ovalWidth
     CGContextRestoreGState(context);
 }
 
+/* 根据UIView和大小生成图片*/
++ (instancetype)getImageWithView:(UIView *)view withSize:(CGSize)size{
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 
 
 @end

@@ -96,4 +96,7 @@
 //获取圆角图片
 + (instancetype)getRadiusImage:(UIImage*)image size:(CGSize)size radius:(CGFloat)r;
 
+/* 根据UIView和大小生成图片*/
++ (instancetype)getImageWithView:(UIView *)view withSize:(CGSize)size;
+
 @end

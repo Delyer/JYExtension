@@ -6,11 +6,19 @@
 //  Copyright © 2017年 Dely. All rights reserved.
 //
 
+//
+//  UIImage+JYCode.m
+//  JYCode
+//
+//  Created by Dely on 2017/8/17.
+//  Copyright © 2017年 Dely. All rights reserved.
+//
+
 #import "UIImage+JYCode.h"
 
 @implementation UIImage (JYCode)
 
-#pragma mark - --------------------公共方法--------------------
+#pragma mark - --------------------公共二维码和条形码方法--------------------
 /*生成二维码(黑白色)*/
 + (UIImage *)getQRWithString:(NSString *)string size:(CGFloat)size{
     UIImage *QRImage = [self getQRWithString:string size:size foreColor:nil logoImage:nil logoRadius:0.0];
@@ -36,7 +44,60 @@
     UIImage *QRImage = [self getImageWithCIImage:QRCIImage size:CGSizeMake(size, size)];
     
     //处理颜色log二维码图片
-    UIImage *handleQRImage = [self getColorOrLogoQRImage:QRImage foreColor:foreColor logo:logo logoRadius:radius] ;
+    UIImage *handleQRImage = [self getColorOrLogoQRImage:QRImage foreColor:foreColor logo:logo logoRadius:radius];
+    
+    return handleQRImage;
+}
+
+/* 生成线性渐变二维码(渐变颜色数组)*/
++ (UIImage *)getLineGradientQRWithString:(NSString *)string size:(CGFloat)size gradientColor:(NSArray<UIColor *>*)colors{
+    UIImage *QRImage = [self getLineGradientQRWithString:string size:size gradientColor:colors logoImage:nil logoRadius:0.0];
+    return QRImage;
+}
+
+/* 生成线性渐变二维码(渐变颜色数组、logo、logo的圆角大小)*/
++ (UIImage *)getLineGradientQRWithString:(NSString *)string size:(CGFloat)size gradientColor:(NSArray<UIColor *>*)colors logoImage:(UIImage *)logo logoRadius:(CGFloat)radius{
+    if (!string || [string class] == [NSNull null]) {
+        return nil;
+    }
+    size = [self validateQRCodeSize:size];
+    CIImage *QRCIImage = [self getQRCIImageWithString:string];
+    
+    //清晰化处理 这个就是黑白二维码图片可以直接使用了
+    UIImage *QRImage = [self getImageWithCIImage:QRCIImage size:CGSizeMake(size, size)];
+    
+    //线性渐变处理
+    UIImage *lineQRImage = [self getLineGradientQRWithImage:QRImage size:size gradientColor:colors];
+    
+    //处理颜色log二维码图片
+    UIImage *handleQRImage = [self getLogoQRImage:lineQRImage logo:logo logoRadius:radius];
+    
+    return handleQRImage;
+}
+
+/* 生成圆形渐变二维码(渐变颜色数组)*/
++ (UIImage *)getRoundGradientQRWithString:(NSString *)string size:(CGFloat)size gradientColor:(NSArray<UIColor *>*)colors{
+    
+    UIImage *QRImage = [self getRoundGradientQRWithString:string size:size gradientColor:colors logoImage:nil logoRadius:0.0];
+    return QRImage;
+}
+
+/* 生成圆形渐变二维码(渐变颜色数组、logo、logo的圆角大小)*/
++ (UIImage *)getRoundGradientQRWithString:(NSString *)string size:(CGFloat)size gradientColor:(NSArray<UIColor *>*)colors logoImage:(UIImage *)logo logoRadius:(CGFloat)radius{
+    if (!string || [string class] == [NSNull null]) {
+        return nil;
+    }
+    size = [self validateQRCodeSize:size];
+    CIImage *QRCIImage = [self getQRCIImageWithString:string];
+    
+    //清晰化处理 这个就是黑白二维码图片可以直接使用了
+    UIImage *QRImage = [self getImageWithCIImage:QRCIImage size:CGSizeMake(size, size)];
+    
+    //圆形渐变处理
+    UIImage *lineQRImage = [self getRoundGradientQRWithImage:QRImage size:size gradientColor:colors];
+    
+    //处理颜色log二维码图片
+    UIImage *handleQRImage = [self getLogoQRImage:lineQRImage logo:logo logoRadius:radius];
     
     return handleQRImage;
 }
@@ -106,6 +167,7 @@
 }
 
 
+//处理颜色log二维码图片
 + (UIImage *)getColorOrLogoQRImage:(UIImage *)image foreColor:(UIColor *)foreColor logo:(UIImage *)logo logoRadius:(CGFloat)radius{
     UIImage *colorQRImage = [self getColorQRImage:image foreColor:foreColor];
     UIImage *logoQRImage = [self getLogoQRImage:colorQRImage logo:logo logoRadius:radius];
@@ -113,6 +175,7 @@
 }
 
 
+#pragma mark - -----填充颜色私有方法
 //填充颜色
 void ProviderReleaseData(void *info, const void *data, size_t size) {
     free((void *)data);
@@ -175,9 +238,9 @@ void ProviderReleaseData(void *info, const void *data, size_t size) {
     }
 }
 
-
+#pragma mark - -----填充logo的私有方法
 //填充logo
-+ (UIImage *)getLogoQRImage:(UIImage *)image logo:(UIImage *)logo logoRadius:(CGFloat)radius;{
++ (UIImage *)getLogoQRImage:(UIImage *)image logo:(UIImage *)logo logoRadius:(CGFloat)radius{
     if (!logo) {
         return image;
     }
@@ -296,7 +359,173 @@ static void JYAddRoundedRectToPath(CGContextRef context, CGRect rect, float oval
 }
 
 
-//获取二维码CIImage
+#pragma mark - -----线性渐变二维码私有方法
++ (UIImage *)getLineGradientQRWithImage:(UIImage *)image size:(CGFloat)size gradientColor:(NSArray<UIColor *>*)colors{
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size, size)];
+    
+    CALayer *maskLayer = [CALayer layer];
+    maskLayer.frame = imageView.bounds;
+    [imageView.layer addSublayer:maskLayer];
+    
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    
+    NSMutableArray *CGColorArray = [NSMutableArray array];
+    for (UIColor *color in colors) {
+        [CGColorArray addObject:(__bridge id)color.CGColor];
+    }
+    
+    gradientLayer.colors = CGColorArray;
+    [imageView.layer addSublayer: gradientLayer];
+    gradientLayer.frame = imageView.bounds;
+    
+    UIImage *maskImage = [self getLineGradientQRCodeImageMask:image];
+    maskLayer.contents = (__bridge id)maskImage.CGImage;
+    maskLayer.frame = imageView.bounds;
+    gradientLayer.mask = maskLayer;
+    
+    UIImage *QRImage = [self getImageWithView:imageView withSize:imageView.frame.size];
+    return QRImage;
+}
+
++ (UIImage *)getLineGradientQRCodeImageMask:(UIImage *)image{
+    if (image) {
+        int bitsPerComponent = 8;
+        int bytesPerPixel = 4;
+        int width = image.size.width;
+        int height = image.size.height;
+        unsigned char * imageData = (unsigned char *)malloc(width * height * bytesPerPixel);
+        
+        // 将原始黑白二维码图片绘制到像素格式为ARGB的图片上，绘制后的像素数据在imageData中。
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        CGContextRef imageContext = CGBitmapContextCreate(imageData, width, height, bitsPerComponent, bytesPerPixel * width, colorSpace, kCGImageAlphaPremultipliedFirst);
+        UIGraphicsPushContext(imageContext);
+        CGContextTranslateCTM(imageContext, 0, height);
+        CGContextScaleCTM(imageContext, 1, -1);
+        [image drawInRect:CGRectMake(0, 0, width, height)];
+        
+        CGColorSpaceRelease(colorSpace);
+        
+        // 根据每个像素R通道的值修改Alpha通道的值，当Red大于100，则将Alpha置为0，反之置为255
+        for (int row = 0; row < height; ++row) {
+            for (int col = 0; col < width; ++col) {
+                int offset = row * width * bytesPerPixel + col * bytesPerPixel;
+                unsigned char r = imageData[offset + 1];
+                unsigned char alpha = r > 100 ? 0 : 255;
+                imageData[offset] = alpha;
+            }
+        }
+        
+        CGImageRef cgMaskImage = CGBitmapContextCreateImage(imageContext);
+        UIImage *maskImage = [UIImage imageWithCGImage:cgMaskImage];
+        CFRelease(cgMaskImage);
+        UIGraphicsPopContext();
+        CFRelease(imageContext);
+        
+        free(imageData);
+        return maskImage;
+    }
+    
+    return nil;
+}
+
+
+//根据View获取一张图片
++ (UIImage *)getImageWithView:(UIView *)view withSize:(CGSize)size{
+    // 下面方法，第一个参数表示区域大小。第二个参数表示是否是非透明的。如果需要显示半透明效果，需要传NO，否则传YES。第三个参数就是屏幕密度了，关键就是第三个参数 [UIScreen mainScreen].scale。
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+#pragma mark - -----圆形渐变二维码私有方法
+
++ (UIImage *)getRoundGradientQRWithImage:(UIImage *)image size:(CGFloat)size gradientColor:(NSArray<UIColor *>*)colors{
+    
+    CGRect rect = CGRectMake(0, 0, size, size);
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
+    
+    CALayer *maskLayer = [CALayer layer];
+    maskLayer.frame = imageView.bounds;
+    [imageView.layer addSublayer:maskLayer];
+    
+    //创建CGContextRef
+    UIGraphicsBeginImageContext(imageView.bounds.size);
+    CGContextRef gc = UIGraphicsGetCurrentContext();
+    
+    //创建CGMutablePathRef
+    CGMutablePathRef path = CGPathCreateMutable();
+    //绘制Path
+    CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
+    CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMaxY(rect));
+    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(rect), CGRectGetMaxY(rect));
+    CGPathAddLineToPoint(path, NULL, CGRectGetWidth(rect), CGRectGetMinY(rect));
+    CGPathCloseSubpath(path);
+    
+    //绘制渐变
+    [self drawRoundGradient:gc path:path colors:colors];
+    
+    //注意释放CGMutablePathRef
+    CGPathRelease(path);
+    
+    //从Context中获取图像，并显示在界面上
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.contents = (__bridge id)img.CGImage;
+    [imageView.layer addSublayer: gradientLayer];
+    gradientLayer.frame = imageView.bounds;
+    
+    UIImage *maskImage = [self getLineGradientQRCodeImageMask:image];
+    maskLayer.contents = (__bridge id)maskImage.CGImage;
+    maskLayer.frame = imageView.bounds;
+    gradientLayer.mask = maskLayer;
+    
+    UIImage *QRImage = [self getImageWithView:imageView withSize:imageView.frame.size];
+    return QRImage;
+}
+
++ (void)drawRoundGradient:(CGContextRef)context path:(CGPathRef)path colors:(NSArray *)roundColors{
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    if (roundColors.count < 1) {
+        roundColors = @[[UIColor blackColor]];
+    }
+    
+    NSInteger totalCount = roundColors.count;
+    CGFloat loactions[totalCount];
+    NSMutableArray *colors = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < roundColors.count; i++) {
+        loactions[i] = 1.0/totalCount*(i+1);
+        UIColor *color = [roundColors objectAtIndex:i];
+        [colors addObject:(__bridge id)color.CGColor];
+    }
+    
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef) colors, loactions);
+    
+    CGRect pathRect = CGPathGetBoundingBox(path);
+    CGPoint center = CGPointMake(CGRectGetMidX(pathRect), CGRectGetMidY(pathRect));
+    CGFloat radius = MAX(pathRect.size.width / 2.0, pathRect.size.height / 2.0) * sqrt(2);
+    
+    CGContextSaveGState(context);
+    CGContextAddPath(context, path);
+    CGContextEOClip(context);
+    
+    CGContextDrawRadialGradient(context, gradient, center, 0, center, radius, 0);
+    
+    CGContextRestoreGState(context);
+    
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorSpace);
+}
+
+#pragma mark - -----条形码私有方法
+//获取条形码CIImage
 + (CIImage *)getBarCIImageWithString:(NSString *)string{
     // iOS 8.0以上的系统才支持条形码的生成，iOS8.0以下使用第三方控件生成
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
@@ -306,11 +535,10 @@ static void JYAddRoundedRectToPath(CGContextRef context, CGRect rect, float oval
         [barFilter setValue:data forKey:@"inputMessage"];
         // 设置生成的条形码的上，下，左，右的margins的值
         [barFilter setValue:@(0) forKey:@"inputQuietSpace"];
-    
+        
         return barFilter.outputImage;
     }
     return nil;
 }
-
 
 @end
