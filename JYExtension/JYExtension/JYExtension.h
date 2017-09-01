@@ -39,6 +39,7 @@
 #import "NSError+JYHandle.h"
 #import "NSURL+JYHandle.h"
 #import "NSObject+encode.h"
+#import "NSObject+JYRuntime.h"
 
 //UIKit
 #import "UIDevice+JYInfo.h"

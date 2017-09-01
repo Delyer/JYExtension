@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FoundationController : UIViewController
+@interface FoundationController : UIViewController{
+    NSString *length;
+}
+
+@property (nonatomic, assign) NSInteger age;
+@property (nonatomic, strong) NSString *name;
 
 @end

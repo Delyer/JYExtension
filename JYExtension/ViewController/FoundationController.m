@@ -331,5 +331,8 @@
     NSDate *testDate = [NSDate dateWithYYYYMMddHHmmss:@"2017-08-09 12:00:00"];
     NSLog(@"是否是同一周：%d", [nowDate sameWeekWithDate:testDate]);
     
+    NSLog(@"%@",[self getAllProperties]);
+    NSLog(@"%@",[self getAllMethods]);
+    NSLog(@"%@",[self getAllIvars]);
 }
 @end

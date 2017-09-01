@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A318B3DB1F59D2B200C3901F /* NSObject+JYRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A318B3DA1F59D2B200C3901F /* NSObject+JYRuntime.m */; };
 		A349DCCF1F43C40200F20154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DCCE1F43C40200F20154 /* main.m */; };
 		A349DCD21F43C40200F20154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DCD11F43C40200F20154 /* AppDelegate.m */; };
 		A349DCDA1F43C40200F20154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A349DCD91F43C40200F20154 /* Assets.xcassets */; };
@@ -57,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A318B3D91F59D2B200C3901F /* NSObject+JYRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JYRuntime.h"; sourceTree = "<group>"; };
+		A318B3DA1F59D2B200C3901F /* NSObject+JYRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JYRuntime.m"; sourceTree = "<group>"; };
 		A349DCCA1F43C40200F20154 /* JYExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A349DCCE1F43C40200F20154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A349DCD01F43C40200F20154 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 			children = (
 				A349DD141F43C55800F20154 /* NSObject+encode.h */,
 				A349DD151F43C55800F20154 /* NSObject+encode.m */,
+				A318B3D91F59D2B200C3901F /* NSObject+JYRuntime.h */,
+				A318B3DA1F59D2B200C3901F /* NSObject+JYRuntime.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -652,6 +657,7 @@
 				A349DD6B1F43C55800F20154 /* NSString+JYTransform.m in Sources */,
 				A349DD671F43C55800F20154 /* NSNumber+JYNumber.m in Sources */,
 				A349DCCF1F43C40200F20154 /* main.m in Sources */,
+				A318B3DB1F59D2B200C3901F /* NSObject+JYRuntime.m in Sources */,
 				A349DD761F43C55800F20154 /* UIView+JYEvent.m in Sources */,
 				A349DCEE1F43C4A700F20154 /* FoundationController.m in Sources */,
 				A349DD681F43C55800F20154 /* NSObject+encode.m in Sources */,
