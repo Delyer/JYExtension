@@ -20,7 +20,7 @@
 - (void)infoViewWillAppear:(BOOL)animated {
     
     NSString *className = NSStringFromClass([self class]);
-    NSLog(@"%@ will appear",className);
+    NSLog(@"当前VCName = %@ ",className);
 
     [self infoViewWillAppear:animated];
 }
