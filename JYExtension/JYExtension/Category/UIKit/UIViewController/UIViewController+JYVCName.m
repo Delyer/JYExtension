@@ -13,8 +13,10 @@
 @implementation UIViewController (JYVCName)
 
 + (void)load{
+#ifdef DEBUG
     Class class = [self class];
     [JYSwizzing JYInstanceSwizzleSelector:class originalSelector:@selector(viewWillAppear:) swizzledSelector:@selector(infoViewWillAppear:)];
+#endif
 }
 
 - (void)infoViewWillAppear:(BOOL)animated {
