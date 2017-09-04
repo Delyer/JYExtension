@@ -55,6 +55,7 @@
 		A349DD801F43C55800F20154 /* JYOnceRun.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DD581F43C55800F20154 /* JYOnceRun.m */; };
 		A349DD811F43C55800F20154 /* JYWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DD5C1F43C55800F20154 /* JYWeakTimer.m */; };
 		A3725A6F1F4E38AC00A562C9 /* UIImage+JYCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A3725A6E1F4E38AC00A562C9 /* UIImage+JYCode.m */; };
+		A3A9DED41F5DBAB800A58141 /* UIViewController+JYVCName.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A9DED31F5DBAB800A58141 /* UIViewController+JYVCName.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +154,8 @@
 		A349DD5D1F43C55800F20154 /* JYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYExtension.h; sourceTree = "<group>"; };
 		A3725A6D1F4E38AC00A562C9 /* UIImage+JYCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JYCode.h"; sourceTree = "<group>"; };
 		A3725A6E1F4E38AC00A562C9 /* UIImage+JYCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JYCode.m"; sourceTree = "<group>"; };
+		A3A9DED21F5DBAB800A58141 /* UIViewController+JYVCName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JYVCName.h"; sourceTree = "<group>"; };
+		A3A9DED31F5DBAB800A58141 /* UIViewController+JYVCName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JYVCName.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +393,7 @@
 				A349DD411F43C55800F20154 /* UIWindow */,
 				A349DD261F43C55800F20154 /* UIAlertView */,
 				A349DD291F43C55800F20154 /* UIApplication */,
+				A3A9DED11F5DBA7200A58141 /* UIViewController */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -547,6 +551,15 @@
 			path = WeakTimer;
 			sourceTree = "<group>";
 		};
+		A3A9DED11F5DBA7200A58141 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3A9DED21F5DBAB800A58141 /* UIViewController+JYVCName.h */,
+				A3A9DED31F5DBAB800A58141 /* UIViewController+JYVCName.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -648,6 +661,7 @@
 				A349DD721F43C55800F20154 /* UIColor+JYCommon.m in Sources */,
 				A349DD7D1F43C55800F20154 /* JYAsyncRun.m in Sources */,
 				A349DCD21F43C40200F20154 /* AppDelegate.m in Sources */,
+				A3A9DED41F5DBAB800A58141 /* UIViewController+JYVCName.m in Sources */,
 				A349DD711F43C55800F20154 /* UIButton+JYExtension.m in Sources */,
 				A349DD6A1F43C55800F20154 /* NSString+JYJudge.m in Sources */,
 				A349DCF01F43C4A700F20154 /* UKController.m in Sources */,
