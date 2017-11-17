@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31789DE1FBE7A2A006E24C6 /* UIView+JYResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = A31789DD1FBE7A2A006E24C6 /* UIView+JYResponder.m */; };
 		A318B3DB1F59D2B200C3901F /* NSObject+JYRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A318B3DA1F59D2B200C3901F /* NSObject+JYRuntime.m */; };
 		A349DCCF1F43C40200F20154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DCCE1F43C40200F20154 /* main.m */; };
 		A349DCD21F43C40200F20154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A349DCD11F43C40200F20154 /* AppDelegate.m */; };
@@ -59,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A31789DC1FBE7A2A006E24C6 /* UIView+JYResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JYResponder.h"; sourceTree = "<group>"; };
+		A31789DD1FBE7A2A006E24C6 /* UIView+JYResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JYResponder.m"; sourceTree = "<group>"; };
 		A318B3D91F59D2B200C3901F /* NSObject+JYRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JYRuntime.h"; sourceTree = "<group>"; };
 		A318B3DA1F59D2B200C3901F /* NSObject+JYRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JYRuntime.m"; sourceTree = "<group>"; };
 		A349DCCA1F43C40200F20154 /* JYExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -465,6 +468,8 @@
 				A349DD3E1F43C55800F20154 /* UIView+JYFrame.m */,
 				A349DD3F1F43C55800F20154 /* UIView+JYLocation.h */,
 				A349DD401F43C55800F20154 /* UIView+JYLocation.m */,
+				A31789DC1FBE7A2A006E24C6 /* UIView+JYResponder.h */,
+				A31789DD1FBE7A2A006E24C6 /* UIView+JYResponder.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -662,6 +667,7 @@
 				A349DD7D1F43C55800F20154 /* JYAsyncRun.m in Sources */,
 				A349DCD21F43C40200F20154 /* AppDelegate.m in Sources */,
 				A3A9DED41F5DBAB800A58141 /* UIViewController+JYVCName.m in Sources */,
+				A31789DE1FBE7A2A006E24C6 /* UIView+JYResponder.m in Sources */,
 				A349DD711F43C55800F20154 /* UIButton+JYExtension.m in Sources */,
 				A349DD6A1F43C55800F20154 /* NSString+JYJudge.m in Sources */,
 				A349DCF01F43C4A700F20154 /* UKController.m in Sources */,

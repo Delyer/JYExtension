@@ -11,10 +11,10 @@
 
 @interface UIView ()
 @property (nonatomic, copy) ActionBlock tapBlock;
-@property(nonatomic, strong, readonly) UITapGestureRecognizer *tapGestureRecognizer;
+@property (nonatomic, strong, readonly) UITapGestureRecognizer *tapGestureRecognizer;
 
 @property (nonatomic, copy) ActionBlock longPressBlock;
-@property(nonatomic, strong, readonly) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property (nonatomic, strong, readonly) UILongPressGestureRecognizer *longPressGestureRecognizer;
 
 @end
 
