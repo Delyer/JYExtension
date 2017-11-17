@@ -49,6 +49,7 @@
 #import "UIView+JYFrame.h"
 #import "UIView+JYCommon.h"
 #import "UIView+JYLocation.h"
+#import "UIView+JYResponder.h"
 #import "UIButton+JYExtension.h"
 #import "UIImage+JYHandle.h"
 #import "UIWindow+JYInfo.h"
